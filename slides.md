@@ -125,3 +125,5 @@ public static void Main(string[] args)
   cuebrick.GetAge(); // return 20
 }
 ```
+
+## Static fields
