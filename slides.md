@@ -163,3 +163,36 @@ public static void Main(string[] args)
   ACDC.count; // count = 2;
 }
 ```
+# Advanced C#
+
+## Keywords
+
+* `var`
+* `typeof`
+* and a lot more (`yield`, `explicit`, `try`, `unsafe`, `using`)
+
+# var
+
+```cs
+ACDC acdc = new ACDC();
+// is the same thing as
+var acdc = new ACDC();
+```
+
+# var and null
+
+```cs
+var tetra = new ACDC();
+tetra = null;
+
+ACDC tetra = new ACDC();
+tetra = null;
+
+var tetra = null; // compilation failed
+```
+
+# typeof
+
+```cs
+```
+
