@@ -127,3 +127,39 @@ public static void Main(string[] args)
 ```
 
 ## Static fields
+
+* Common to every instance of a class
+* Cannot be accessed from instance
+* Cannot be accessed with **this**.
+
+##  Static Class
+
+* Cannot be instantiated
+* Every field is static
+
+## Example
+
+```cs
+class ACDC
+{
+  public static int count;
+  public ACDC()
+  {
+    ++count;
+  }
+
+  [...]
+}
+```
+
+## Example
+
+```cs
+public static void Main(string[] args)
+{
+  ACDC garage = new ACDC();
+  ACDC kirzie = new ACDC();
+
+  ACDC.count; // count = 2;
+}
+```

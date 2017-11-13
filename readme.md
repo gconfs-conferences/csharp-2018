@@ -19,4 +19,4 @@
 * Les objects - Inaxys
 * Visibilite - Tetra
 * Heritage, surchage - CueBrick
-* Namespace - Inaxys
+* Advanced C# - Inaxys
