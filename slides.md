@@ -72,7 +72,7 @@ A classic compilation diagram would look like this :
 ## Types initialization
 
 > - Undeclared
-> - `<type> <name> = <value>`
+> - `<type> <name> = <value>;`
 > - Initialized
 
 ## Arrays
@@ -89,12 +89,47 @@ A classic compilation diagram would look like this :
 char dab = '\t';
 int theAnswer = 42;
 float goldNumber = 1.6180f;
-string deadLine = "These violent deadlines have violent ends;"
+string deadLine = "These violent deadlines have violent ends";
 bool youAreCheaters = true;
 
 int[] random = new int[10];
 int[] fibonacci = { 0, 1, 2, 3, 5, 8 };
 ```
+
+## Operators
+
+> - `+(=)`
+> - `++`
+> - `-(=)`
+> - `--`
+> - `*(=)`
+> - `/(=)`
+> - `%(=)`
+
+## Comparison operators
+
+> - `==`
+> - `!=`
+> - `<(=)`
+> - `>(=)`
+
+## Examples
+
+
+## Logical operators
+
+> - `&&`
+> - `||`
+
+## Bitwise operators
+
+> - `&`
+> - `|`
+> - `^`
+> - `<<`
+> - `>>`
+
+## Exemples
 
 # Imperative programming
 
