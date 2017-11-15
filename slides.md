@@ -90,7 +90,7 @@ char dab = '\t';
 int theAnswer = 42;
 float goldNumber = 1.6180f;
 string deadLine = "These violent deadlines have violent ends;"
-bool  = true;
+bool youAreCheaters = true;
 
 int[] random = new int[10];
 int[] fibonacci = { 0, 1, 2, 3, 5, 8 };
