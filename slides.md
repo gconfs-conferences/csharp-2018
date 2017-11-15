@@ -231,11 +231,40 @@ public static void Main(string[] args)
 > - Classes can inherit properties of other classes
 > - The class that inherits is called "Child class"
 > - The class from which the "Child class" inherits is called "Parent class"
+> - Child classes can implement additionnal properties
 > - Allows us to create a tree with our classes
 
 ## Visual example
 
 ![Inheritance tree](img/inheritance.png)
+
+## In Code
+
+```cs
+class Assistant
+{
+  public string nickname;
+
+  public Assistant(string nickname)
+  {
+    this.nickname = nickname;
+  }
+}
+
+class ACDC : Assistant
+{
+  public ACDC(string nickname): base(nickname)
+  {
+    /* No need to initialize this.nickname */
+  }
+
+  public void TeachCAML()
+  {
+    /* CAML magic */
+  }
+}
+
+```
 
 # Advanced C#
 
