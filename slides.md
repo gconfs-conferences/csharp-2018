@@ -81,13 +81,14 @@ A classic compilation diagram would look like this :
 <type>[] <name> = new <type>[size];
 ```
 
-## Examples
+## Initialization - Examples
 
 ```cs
 char dab = '\t';
 int theAnswer = 42;
 float goldRatio = 1.6180f;
-string deadLine = "These violent deadlines have violent ends";
+string deadLine = "These violent deadlines have
+                   violent ends";
 bool youAreCheaters = true;
 
 int[] randomArray = new int[10];
@@ -156,6 +157,77 @@ pow_two <<= 6;
 pow_two ^= 96;
 // base 2 : pow_two = 000100000
 // pow_two = 32
+```
+
+## Warning !
+
+```cs
+int foo = 6;
+int bar = foo;
+bar = 25
+```
+> - What is the value of foo ?
+> - 6
+
+## Warning !
+
+```cs
+int[] foo = { 20, 20 };
+int[] bar = foo;
+bar[0] = 19
+foo[1] = 97;
+```
+
+> - What is the value of foo ?
+> - { 19, 97 }
+
+## Functions
+
+```cs
+<type> <functionName>(<type1> <argName1>, <type2> <argName2>, ...)
+{
+  //Do things
+  return <value of type <type>>
+}
+```
+
+## Functions - Examples
+
+```cs
+string bridge(void)
+{
+  return "You fools !";
+}
+
+void happyBirthday(string name, int age)
+{
+  Console.WriteLine("Happy Birthday " + name +
+                    " ! You are " + age + " years old now !");
+}
+```
+
+> - Why happyBirthDay has void as a return type ?
+> - It writes the string into the console.
+
+## Functions calls
+
+```cs
+string fly = bridge();
+// fly = "You fools !"
+happyBirthday("Cyril", 22);
+Happy Birthday Cyril ! You are 22 years old now !"
+```
+
+## Arguments passed by reference
+
+```cs
+
+```
+
+## Arguments passed by reference - Examples
+
+```cs
+
 ```
 
 # Imperative programming
