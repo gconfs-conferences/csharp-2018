@@ -223,6 +223,20 @@ public static void Main(string[] args)
   ACDC.count; // count = 2;
 }
 ```
+
+# Inheritance
+
+## Concept
+
+> - Classes can inherit properties of other classes
+> - The class that inherits is called "Child class"
+> - The class from which the "Child class" inherits is called "Parent class"
+> - Allows us to create a tree with our classes
+
+## Visual example
+
+![Inheritance tree](img/inheritance.png)
+
 # Advanced C#
 
 ## Keywords
