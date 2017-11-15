@@ -59,8 +59,6 @@ A classic compilation diagram would look like this :
 
 # Syntax
 
-## Syntax
-
 ## Types initialization
 
 > - Undeclared
@@ -88,12 +86,12 @@ A classic compilation diagram would look like this :
 ```cs
 char dab = '\t';
 int theAnswer = 42;
-float goldNumber = 1.6180f;
+float goldRatio = 1.6180f;
 string deadLine = "These violent deadlines have violent ends";
 bool youAreCheaters = true;
 
-int[] random = new int[10];
-int[] fibonacci = { 0, 1, 2, 3, 5, 8 };
+int[] randomArray = new int[10];
+int[] fibonacci = { 0, 1, 1, 2, 3, 5, 8, 13, 21 };
 ```
 
 ## Operators
@@ -115,6 +113,18 @@ int[] fibonacci = { 0, 1, 2, 3, 5, 8 };
 
 ## Examples
 
+```cs
+int theAnswer = 2 * 4 + 2;
+// theAnswer = 10
+theAnswer *= 4;
+// theAnswer = 40
+theAnswer += 2;
+// theAnswer = 42
+bool isTheAnswer = theAnswer == 42;
+// isTheAnswer = true
+bool isEven = theAnswer % 2;
+// isEven = true
+```
 
 ## Logical operators
 
@@ -123,13 +133,30 @@ int[] fibonacci = { 0, 1, 2, 3, 5, 8 };
 
 ## Bitwise operators
 
-> - `&`
-> - `|`
-> - `^`
-> - `<<`
-> - `>>`
+> - `&(=)`
+> - `|(=)`
+> - `^(=)`
+> - `<<(=)`
+> - `>>(=)`
 
 ## Exemples
+
+```cs
+int[] fibonacci = { 0, 1, 1, 2, 3, 5, 8, 13, 21 };
+// fibonacci = { 0, 1, 1, 2, 3, 5, 8, 13, 21 }
+boot randomTest = (fibonacci[2] + fibonacci[5]) == 6
+                  && fibonacci[0] == fibonacci[1];
+// randomTest = false
+int pow_two = 1;
+// base 2 : pow_two = 000000001
+// pow_two = 1
+pow_two <<= 6;
+// base 2 : pow_two = 001000000
+// pow_two = 64
+pow_two ^= 96;
+// base 2 : pow_two = 000100000
+// pow_two = 32
+```
 
 # Imperative programming
 
