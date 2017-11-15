@@ -38,6 +38,14 @@
 > - `C` => `C++` => `C++++`
 
 ## Compilation
+### Classic compilation
+
+A classic compilation diagram would look like this :
+![Classic compilation](img/classic_compilation.png)
+
+### C# compilation
+
+![C# compilation](img/compile_csharp.png)
 
 ## .NET
 
