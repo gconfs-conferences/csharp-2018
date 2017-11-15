@@ -61,6 +61,41 @@ A classic compilation diagram would look like this :
 
 ## Syntax
 
+## Types initialization
+
+> - Undeclared
+> - `<type> <name>;`
+> - Declared but still uninitialized
+> - `<name> = <value>;`
+> - Initialized
+
+## Types initialization
+
+> - Undeclared
+> - `<type> <name> = <value>`
+> - Initialized
+
+## Arrays
+
+```cs
+<type>[] <name>;
+<type>[] <name> = <variable>;
+<type>[] <name> = new <type>[size];
+```
+
+## Examples
+
+```cs
+char dab = '\t';
+int theAnswer = 42;
+float goldNumber = 1.6180f;
+string deadLine = "These violent deadlines have violent ends;"
+bool  = true;
+
+int[] random = new int[10];
+int[] fibonacci = { 0, 1, 2, 3, 5, 8 };
+```
+
 # Imperative programming
 
 ## What is imperative?
