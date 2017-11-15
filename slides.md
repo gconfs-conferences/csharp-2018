@@ -57,6 +57,12 @@ A classic compilation diagram would look like this :
 
 ## .NET
 
+> - Developed by Microsoft
+> - Software Framework
+> - Includes large class library (FCL)
+> - Language interoperability
+> - Open sources
+
 # Syntax
 
 ## Types initialization
@@ -221,18 +227,50 @@ Happy Birthday Cyril ! You are 22 years old now !"
 ## Arguments passed by reference
 
 ```cs
-
+<type> <functionName>(ref <type1> <argName1>,
+                      ref <type2> <argName2>, ...)
+{
+  //Do things
+  return <value of type <type>>
+}
 ```
 
 ## Arguments passed by reference - Examples
 
 ```cs
-
+void setValue(ref int x, int y, int i, int j)
+{
+  x = i;
+  y = j;
+}
 ```
+
+> - What will be the value inside and outside the function ?
+
+## Functions calls
+
+```cs
+int x = 0;
+int y = 0;
+setValue(ref x, y, 36, 30);
+setValue(ref x, 30, 36, y);
+setValue(ref 10, 14, 36, 30);
+```
+
+> - What is the value of x and y after the first call ?
+> - x = 36 and y = 0
+> - What is the value of x and y after the second call ?
+> - x = 36 and y = 0
+> - What is the value of x and y after the third call ?
+> - There is an error
+
+# Questions ?
 
 # Imperative programming
 
 ## What is imperative?
+
+>
 
 # Object Oriented Programming
 
