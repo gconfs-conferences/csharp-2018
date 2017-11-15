@@ -5,6 +5,16 @@
 
 # Introduction
 
+## .NET
+
+# Syntax
+
+## Syntax
+
+# Imperative programming
+
+## What is imperative?
+
 # Object Oriented Programming
 
 ## What is OOP?
