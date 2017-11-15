@@ -41,11 +41,19 @@
 ### Classic compilation
 
 A classic compilation diagram would look like this :
+
 ![Classic compilation](img/classic_compilation.png)
 
 ### C# compilation
 
 ![C# compilation](img/compile_csharp.png)
+
+### What's the difference ?
+
+> - C# uses an intermediate language named `MSIL`
+> - The MSIL generated code is named "Assembly"
+> - This code is compiled using JIT (Just In Time compiler)
+> - The final is a binary program (machine language)
 
 ## .NET
 
