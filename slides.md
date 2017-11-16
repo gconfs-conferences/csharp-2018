@@ -270,7 +270,104 @@ setValue(ref 10, 14, 36, 30);
 
 ## What is imperative?
 
->
+> - You do what I want
+> - Do my exam
+> - If I'm tired make me sleep
+> - While I sleep clean my dishes
+
+## Control structures - if
+
+```cs
+if (<condition1>)
+{
+  // <condition1> is true
+}
+else if (<condition2>) // Optional
+{
+  <condition1> is false and <condition2> is true
+}
+else // Optional
+{
+  // <condition1> and <condition2> are false
+}
+```
+
+## Examples - if
+
+## Control structures - ternary
+
+```cs
+<condition1> ? // condition1 is true : //condition1 is false;
+```
+
+> - ? is the if
+> - : is the else
+> - How can we do a if else <condition2> ?
+> - <condition1> ? // <condition1> is true : <condition2>
+                 ? // <condition1> is false and <condition2> is true
+                 : // <contition1> and <condition2> are false;
+
+## Examples - ternary
+
+## Control structures - switch
+
+```cs
+switch (<variable>)
+{
+  case <case1>:
+    // <variable> == <case1>
+    break;
+  case <case2>:
+    // <variable> == <case2>
+    break;
+  case default:
+    // <variable> is does not match to <case1> or <case2>
+    break;
+}
+```
+
+## Examples - switch
+
+## Control structures - while & do while
+
+```cs
+while (<condition>)
+{
+  // loop until <condition> is false
+}
+
+do {
+  // do this then test the condition
+     and loop if <condition> is true
+} while (<condition>);
+```
+
+## Examples - while & do while
+
+## Control structures - for
+
+```cs
+for (<initial>; <condition>; <instruction>)
+{
+  // loop until <condition> is false
+     and execute <instruction> after a loop
+}
+```
+
+## Examples - for
+
+## Control structures - foreach
+
+```cs
+foreach (<type> <name> in <collection>)
+{
+  // loop in the entire <collection>
+}
+```
+
+## Examples - foreach
+
+# Questions ?
 
 # Object Oriented Programming
 
