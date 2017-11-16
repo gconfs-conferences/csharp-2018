@@ -284,7 +284,7 @@ if (<condition1>)
 }
 else if (<condition2>) // Optional
 {
-  <condition1> is false and <condition2> is true
+  // <condition1> is false and <condition2> is true
 }
 else // Optional
 {
@@ -293,6 +293,23 @@ else // Optional
 ```
 
 ## Examples - if
+
+```cs
+int promo = ...;
+bool acdcu = ...;
+if (promo == 2020 && acdcu)
+{
+  Console.WriteLine("Hi ! I'm Ferdinand !");
+}
+else if (promo == 2020 && !acdcu)
+{
+  Console.WriteLine("Hello ! I'm your ACDC !");
+}
+else
+{
+  Console.WriteLine("I'm still too young :'( !");
+}
+```
 
 ## Control structures - ternary
 
@@ -306,8 +323,14 @@ else // Optional
 > - <condition1> ? // <condition1> is true : <condition2>
                  ? // <condition1> is false and <condition2> is true
                  : // <contition1> and <condition2> are false;
+> - usefull to shorten your code
 
 ## Examples - ternary
+
+```cs
+int n = ...;
+int abs = n >= 0 ? n : 0;
+```
 
 ## Control structures - switch
 
@@ -328,6 +351,19 @@ switch (<variable>)
 
 ## Examples - switch
 
+```cs
+string girl_name = ...;
+switch (name)
+{
+  case "no name":
+    Console.WriteLine("A girl has no name");
+    break;
+  case default:
+    Console.WriteLine("You are not ready " + name);
+    break;
+}
+```
+
 ## Control structures - while & do while
 
 ```cs
@@ -344,6 +380,27 @@ do {
 
 ## Examples - while & do while
 
+```cs
+bool found_charlie = false;
+while (!found_charlie)
+{
+  Console.WriteLine("Where is Charlie ?");
+  found_charlie = find_location();
+}
+Console.WriteLine("Yes ! Charlie is in the kitchen !");
+
+bool found_charlie = false;
+do {
+  Console.WriteLine("Where is Charlie ?");
+  found_charlie = find_location();
+} while (!found_charlie);
+Console.WriteLine("Yes ! Charlie is in the kitchen !");
+```
+
+> - What is the difference between the two loops ?
+> - While test first the condition wheras
+    do while first execute body
+
 ## Control structures - for
 
 ```cs
@@ -356,6 +413,15 @@ for (<initial>; <condition>; <instruction>)
 
 ## Examples - for
 
+```cs
+int n = 0;
+for (int i = 0; i < 100; ++i)
+{
+  n += i;
+}
+// n = 5050
+```
+
 ## Control structures - foreach
 
 ```cs
@@ -366,6 +432,17 @@ foreach (<type> <name> in <collection>)
 ```
 
 ## Examples - foreach
+
+```cs
+string[] names = { "Inaxys", "CueBrick", "Tetra" };
+foreach (string name in names)
+{
+  Console.Writeline(name + " is in the place !");
+}
+```
+
+> - Can we modify the variable in a foreach loop ?
+> - Never do this
 
 # Questions ?
 
