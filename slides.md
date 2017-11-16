@@ -129,7 +129,7 @@ theAnswer += 2;
 // theAnswer = 42
 bool isTheAnswer = theAnswer == 42;
 // isTheAnswer = true
-bool isEven = theAnswer % 2;
+bool isEven = theAnswer % 2 == 0;
 // isEven = true
 ```
 
@@ -152,7 +152,7 @@ bool isEven = theAnswer % 2;
 ```cs
 int[] fibonacci = { 0, 1, 1, 2, 3, 5, 8, 13, 21 };
 // fibonacci = { 0, 1, 1, 2, 3, 5, 8, 13, 21 }
-boot randomTest = (fibonacci[2] + fibonacci[5]) == 6
+bool randomTest = (fibonacci[2] + fibonacci[5]) == 6
                   && fibonacci[0] == fibonacci[1];
 // randomTest = false
 int pow_two = 1;
@@ -181,7 +181,7 @@ bar = 25
 ```cs
 int[] foo = { 20, 20 };
 int[] bar = foo;
-bar[0] = 19
+bar[0] = 19;
 foo[1] = 97;
 ```
 
@@ -202,7 +202,7 @@ foo[1] = 97;
 ## Functions - Examples
 
 ```cs
-string bridge(void)
+string bridge()
 {
   return "You fools !";
 }
@@ -351,7 +351,7 @@ switch (<variable>)
   case <case2>:
     // <variable> == <case2>
     break;
-  case default:
+  case :
     // <variable> is does not match to <case1> or <case2>
     break;
 }
@@ -366,7 +366,7 @@ switch (name)
   case "no name":
     Console.WriteLine("A girl has no name");
     break;
-  case default:
+  case :
     Console.WriteLine("You are not ready " + name);
     break;
 }
@@ -449,7 +449,7 @@ foreach (<type> <name> in <collection>)
 string[] names = { "Inaxys", "CueBrick", "Tetra" };
 foreach (string name in names)
 {
-  Console.Writeline(name + " is in the place !");
+  Console.WriteLine(name + " is in the place !");
 }
 ```
 
