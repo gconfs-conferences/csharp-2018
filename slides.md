@@ -140,6 +140,7 @@ bool isEven = theAnswer % 2;
 
 ## Bitwise operators
 
+> - '!'
 > - `&(=)`
 > - `|(=)`
 > - `^(=)`
@@ -190,7 +191,8 @@ foo[1] = 97;
 ## Functions
 
 ```cs
-<type> <functionName>(<type1> <argName1>, <type2> <argName2>, ...)
+<type> <functionName>(<type1> <argName1>, <type2> <argName2>,
+                      ...)
 {
   //Do things
   return <value of type <type>>
@@ -314,15 +316,18 @@ else
 ## Control structures - ternary
 
 ```cs
-<condition1> ? // condition1 is true : //condition1 is false;
+<condition1> ? /* condition1 is true */
+             : /* condition1 is false*/;
 ```
 
 > - ? is the if
 > - : is the else
-> - How can we do a if else <condition2> ?
-> - <condition1> ? // <condition1> is true : <condition2>
-                 ? // <condition1> is false and <condition2> is true
-                 : // <contition1> and <condition2> are false;
+> - How can we do a if else \<condition2> ?
+> -   \<condition1> ? /* \<condition1> is true*/
+                        : \<condition2> ? /* <condition1> is
+                        false and <condition2> is true */
+                        : /* <contition1> and <condition2>
+                        are false*/;
 > - usefull to shorten your code
 
 ## Examples - ternary
@@ -331,6 +336,9 @@ else
 int n = ...;
 int abs = n >= 0 ? n : 0;
 ```
+
+> - What is the value of abs ?
+> - if n is negative abs is null else it's n
 
 ## Control structures - switch
 
@@ -374,7 +382,7 @@ while (<condition>)
 
 do {
   // do this then test the condition
-     and loop if <condition> is true
+  // and loop if <condition> is true
 } while (<condition>);
 ```
 
@@ -388,7 +396,11 @@ while (!found_charlie)
   found_charlie = find_location();
 }
 Console.WriteLine("Yes ! Charlie is in the kitchen !");
+```
 
+## Examples - while & do while
+
+```cs
 bool found_charlie = false;
 do {
   Console.WriteLine("Where is Charlie ?");
@@ -407,7 +419,7 @@ Console.WriteLine("Yes ! Charlie is in the kitchen !");
 for (<initial>; <condition>; <instruction>)
 {
   // loop until <condition> is false
-     and execute <instruction> after a loop
+  // and execute <instruction> after a loop
 }
 ```
 
@@ -604,6 +616,8 @@ public static void Main(string[] args)
   ACDC.count; // count = 2;
 }
 ```
+
+# Visibility
 
 # Inheritance
 
