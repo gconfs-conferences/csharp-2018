@@ -12,14 +12,15 @@
 > - Developped by Microsoft
 > - Strongly inspired by Java and C++
 
-## History
-### Origin
+# History
+
+## Origin
 
 > - Created for .NET framework as a replacement for `SMC`
 > - January 1999: Anders Hejlsberg forms a team to build a new language
 > - July 2000: Public annoucement of .NET and C# during the Professional Developpers Conference
 
-### Versions
+## Versions
 
 | C# version | Release date  | Adding                                        |
 |------------|---------------|-----------------------------------------------|
@@ -31,24 +32,25 @@
 | 6.0        | July 2015     | String interpolation, Dictionnary initializer |
 | 7.0        | March 2017    | Local functions                               |
 
-### Name
+## Name
 
 > - Originally named `Cool` (C-like Object Oriented Language)
 > - Musical notation: semitone higher in pitch
 > - `C` => `C++` => `C++++`
 
-## Compilation
-### Classic compilation
+# Compilation
+
+## Classic compilation
 
 A classic compilation diagram would look like this :
 
 ![Classic compilation](img/classic_compilation.png)
 
-### C# compilation
+## C# compilation
 
 ![C# compilation](img/compile_csharp.png)
 
-### What's the difference ?
+## What's the difference ?
 
 > - C# uses an intermediate language named `MSIL`
 > - The MSIL generated code is named "Assembly"
@@ -645,7 +647,11 @@ class Assistant
     this.nickname = nickname;
   }
 }
+```
 
+# In Code
+
+```cs
 class ACDC : Assistant
 {
   public ACDC(string nickname): base(nickname)
@@ -658,7 +664,6 @@ class ACDC : Assistant
     /* CAML magic */
   }
 }
-
 ```
 
 # Advanced C#
