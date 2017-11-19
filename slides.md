@@ -42,6 +42,20 @@ public class HelloWorld {
 
 ## Compilation 101
 
+> - The computer works only with 0 and 1 (Machine language)
+> - We need to translate our source code into machine language
+> - This is called **compilation**
+> - Compiler: program of translation
+> - Called once for many executions
+
+## Compilation 101
+
+![Compilation Diagram](img/Compilation101.png)
+
+## C# Compilation
+
+![C# Compilation Diagram](img/CSCompilation.png)
+
 ## .NET
 
 > - Developed by Microsoft
