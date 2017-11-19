@@ -5,32 +5,34 @@
 
 # Introduction
 
-## Quick characteristics
+## C# characteristics
 
 > - Multi-paradigm (mostly object oriented)
 > - Strong typing
 > - Developped by Microsoft
 > - Strongly inspired by Java and C++
 
-# History
+## Code example
 
-## Origin
+### Java Hello World
+```java
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello world!");
+  }
+}
+```
 
-> - Created for .NET framework as a replacement for `SMC`
-> - January 1999: Anders Hejlsberg forms a team to build a new language
-> - July 2000: Public annoucement of .NET and C# during the Professional Developpers Conference
+### C# Hello World
+```cs
+using System;
 
-## Versions
-
-| C# version | Release date  | Adding                                        |
-|------------|---------------|-----------------------------------------------|
-| 1.0        | January 2002  | Lot of things                                 |
-| 2.0        | June 2006     | `static`, `null`, generics, delegates         |
-| 3.0        | November 2007 | `var`, automatic properties, initializers     |
-| 4.0        | April 2010    | Optional parameters                           |
-| 5.0        | August 2012   | Not so much                                   |
-| 6.0        | July 2015     | String interpolation, Dictionnary initializer |
-| 7.0        | March 2017    | Local functions                               |
+public class HelloWorld {
+  public static void Main() {
+    Console.WriteLine("Hello World!");
+  }
+}
+```
 
 ## Name
 
@@ -38,24 +40,7 @@
 > - Musical notation: semitone higher in pitch
 > - `C` => `C++` => `C++++`
 
-# Compilation
-
-## Classic compilation
-
-A classic compilation diagram would look like this :
-
-![Classic compilation](img/classic_compilation.png)
-
-## C# compilation
-
-![C# compilation](img/compile_csharp.png)
-
-## What's the difference ?
-
-> - C# uses an intermediate language named `MSIL`
-> - The MSIL generated code is named "Assembly"
-> - This code is compiled using JIT (Just In Time compiler)
-> - The final is a binary program (machine language)
+## Compilation 101
 
 ## .NET
 
