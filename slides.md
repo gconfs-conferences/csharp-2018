@@ -464,10 +464,10 @@ foreach (string name in names)
 
 ## What is OOP?
 
-* A concept
-* Patterns
-* Create 'objects' from the patterns
-* Object interaction
+> - A solution to a problem
+> - A concept
+> - Patterns
+> - Create 'objects' from the patterns
 
 ## A class
 
@@ -587,11 +587,6 @@ public static void Main(string[] args)
 * Cannot be accessed from instance
 * Cannot be accessed with **this**.
 
-##  Static Class
-
-* Cannot be instantiated
-* Every field is static
-
 ## Example
 
 ```cs
@@ -618,6 +613,28 @@ public static void Main(string[] args)
   ACDC.count; // count = 2;
 }
 ```
+
+##  Static Class
+
+> - Cannot be instantiated
+> - Every field is static
+
+## Example
+
+```cs
+static class MY_MATH
+{
+  // every method is static
+  static int Power(int a, int b);
+  [...]
+}
+
+public static main(string[] args)
+{
+  MY_MATH.Power(2, 2); // = 4
+}
+```
+
 
 # Visibility
 
