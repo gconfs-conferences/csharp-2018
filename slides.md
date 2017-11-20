@@ -457,7 +457,7 @@ foreach (string name in names)
 > - Can we modify the variable in a foreach loop ?
 > - Never do this
 
-# Questions ?
+## Questions ?
 
 # Object Oriented Programming
 
@@ -474,9 +474,9 @@ foreach (string name in names)
 class ACDC
 {
   //fields
-  float _height;
-  float _weight;
-  bool _isMean;
+  float height;
+  float weight;
+  bool isMean;
   [...]
 }
 ```
@@ -487,11 +487,11 @@ class ACDC
 class Student
 {
   // fields
-  string _name;
-  float _height;
-  float _weight;
-  bool _isMean;
-  Color _hairColor;
+  string name;
+  float height;
+  float weight;
+  bool isMean;
+  Color hairColor;
 
   // methods
   string GetName();
@@ -535,9 +535,9 @@ public static void Main(string[] args)
 class ACDC
 {
   // fields
-  string _name;
-  int _height;
-  int _age;
+  string name;
+  int height;
+  int age;
   [...]
 
   // method
@@ -553,16 +553,16 @@ class ACDC
 {
   public ACDC()
   {
-    this._name = "Cyril";
-    this._height = 180;
-    this._age = 2;
+    this.name = "Cyril";
+    this.height = 180;
+    this.age = 2;
   }
 
   public ACDC(string name, int height, int age)
   {
-    this._name = name;
-    this._height = height;
-    this._age = age;
+    this.name = name;
+    this.height = height;
+    this.age = age;
   }
 }
 ```
@@ -613,7 +613,6 @@ public static void Main(string[] args)
 }
 ```
 
-<<<<<<< HEAD
 ##  Static Class
 
 > - Cannot be instantiated
@@ -635,9 +634,8 @@ public static main(string[] args)
 }
 ```
 
-
 # Visibility
-=======
+
 # Scope visibility
 
 ## Visibility
@@ -710,7 +708,6 @@ public class ACDC {
   }
 }
 ```
->>>>>>> 4e9b609a511f3c996bfa26b9947f418d90b0b153
 
 # Inheritance
 
