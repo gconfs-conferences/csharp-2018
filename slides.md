@@ -5,32 +5,34 @@
 
 # Introduction
 
-## Quick characteristics
+## C# characteristics
 
 > - Multi-paradigm (mostly object oriented)
 > - Strong typing
 > - Developped by Microsoft
 > - Strongly inspired by Java and C++
 
-# History
+## Code example
 
-## Origin
+### Java Hello World
+```java
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello world!");
+  }
+}
+```
 
-> - Created for .NET framework as a replacement for `SMC`
-> - January 1999: Anders Hejlsberg forms a team to build a new language
-> - July 2000: Public annoucement of .NET and C# during the Professional Developpers Conference
+### C# Hello World
+```cs
+using System;
 
-## Versions
-
-| C# version | Release date  | Adding                                        |
-|------------|---------------|-----------------------------------------------|
-| 1.0        | January 2002  | Lot of things                                 |
-| 2.0        | June 2006     | `static`, `null`, generics, delegates         |
-| 3.0        | November 2007 | `var`, automatic properties, initializers     |
-| 4.0        | April 2010    | Optional parameters                           |
-| 5.0        | August 2012   | Not so much                                   |
-| 6.0        | July 2015     | String interpolation, Dictionnary initializer |
-| 7.0        | March 2017    | Local functions                               |
+public class HelloWorld {
+  public static void Main() {
+    Console.WriteLine("Hello World!");
+  }
+}
+```
 
 ## Name
 
@@ -38,24 +40,21 @@
 > - Musical notation: semitone higher in pitch
 > - `C` => `C++` => `C++++`
 
-# Compilation
+## Compilation 101
 
-## Classic compilation
+> - The computer works only with 0 and 1 (Machine language)
+> - We need to translate our source code into machine language
+> - This is called **compilation**
+> - Compiler: program of translation
+> - Called once for many executions
 
-A classic compilation diagram would look like this :
+## Compilation 101
 
-![Classic compilation](img/classic_compilation.png)
+![Compilation Diagram](img/Compilation101.png)
 
-## C# compilation
+## C# Compilation
 
-![C# compilation](img/compile_csharp.png)
-
-## What's the difference ?
-
-> - C# uses an intermediate language named `MSIL`
-> - The MSIL generated code is named "Assembly"
-> - This code is compiled using JIT (Just In Time compiler)
-> - The final is a binary program (machine language)
+![C# Compilation Diagram](img/CSCompilation.png)
 
 ## .NET
 
@@ -614,6 +613,7 @@ public static void Main(string[] args)
 }
 ```
 
+<<<<<<< HEAD
 ##  Static Class
 
 > - Cannot be instantiated
@@ -637,8 +637,90 @@ public static main(string[] args)
 
 
 # Visibility
+=======
+# Scope visibility
+
+## Visibility
+
+```cs
+if (name == "Inaxys" || name == "Tetra")
+{
+  int awesomeness = 9001; // Over 9000
+
+  Console.WriteLine("Awesomeness: " + awesomeness);
+}
+Console.WriteLine("Awesomeness: " + awesomeness);
+```
+
+> - What will be written in the console ?
+> - **It won't even compile !**
+
+## What is a scope
+
+> - A scope is a block of code
+> - Nested with brackets `{ }`
+> - Everything you create within a scope is not visible outside
+
+# Class members visibility
+
+## The problem
+
+```cs
+public class ACDC {
+  public string _name;
+  public string _tshirt_name;
+  public string _intranet_password;
+
+  public ACDC(string name, string passwd) {
+    this._name = name;
+    this._string_name = name;
+    this._intranet_password = passwd;
+  }
+}
+```
+
+> - We want `_name` and `_thsirt_name` to be equal at any time
+> - If someone modify `_name`, `_tshirt_name` will not be updated
+> - We do not want another class to see what's in `_intranet_password`
+> - Solution: visibility attributes
+
+## Visibility attributes
+
+> - Three keywords: `public`, `private`, `protected`
+> - Define the visibility of an attribute, a method or a class
+> - Before the type in declaration
+
+## Back to the problem
+
+```cs
+public class ACDC {
+  private string _name;
+  private string _tshirt_name;
+  private string _intranet_password;
+
+  public ACDC(string name, string passwd) {
+    this._name = name;
+    this._string_name = name;
+    this._intranet_password = passwd;
+  }
+
+  public AskKindlyToChangeName(string new_name) {
+    this._name = new_name;
+    this._tshirt_name = new_name;
+  }
+}
+```
+>>>>>>> 4e9b609a511f3c996bfa26b9947f418d90b0b153
 
 # Inheritance
+
+## The Problem
+
+> - Suppose we want to write a class ASM
+> - It has to share properties with the class ACDC
+> - It also has to implement its own new properties
+> - Repetitive code...
+> - That's why inheritance exists
 
 ## Concept
 
@@ -650,35 +732,63 @@ public static main(string[] args)
 
 ## Visual example
 
-![Inheritance tree](img/inheritance.png)
+![ACDC and ASM shared the attributes of Assisstant](img/inheritance.png)
 
 ## In Code
 
+Generic Assisstant class
 ```cs
 class Assistant
 {
-  public string nickname;
+  private string _name;
+  private Color  _tshirt_color;
 
-  public Assistant(string nickname)
+  public Assistant(string name, Color tshirt_color)
   {
-    this.nickname = nickname;
+    this._name = name;
+    this._tshirt_color = tshirt_color;
   }
 }
 ```
 
 ## In Code
 
+ACDC Class
 ```cs
-class ACDC : Assistant
+class ACDC : Assistant // Inherits from Assisstant
 {
-  public ACDC(string nickname): base(nickname)
+  private int _caml_skills;
+
+  public ACDC(string name, int skills):
+         base(name, Color.Brown) // Assisstant constructor
   {
-    /* No need to initialize this.nickname */
+    /* No need to initialize _nickname and _tshirt_color */
+    this._caml_skills = skills;
   }
 
-  public void TeachCAML()
-  {
+  public void TeachCAML() {
     /* CAML magic */
+  }
+}
+```
+
+## In Code
+
+ASM Class
+```cs
+class ASM : Assisstant /* Also inherits from Assisstant */
+{
+  private bool _emacs_lover;
+
+  public ASM(string name, bool emacs):
+         base(name, Color.Grey) // Assisstant constructor
+  {
+    /* No need to initialize _nickname and _tshirt_color */
+    this._emacs_lover = emacs;
+  }
+
+  public void TeachC99() {
+    /* Marwan's magic */
   }
 }
 ```
