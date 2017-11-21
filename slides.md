@@ -100,6 +100,33 @@ public class HelloWorld {
 > - `float[] floatArray = new float[10];`{.cs}
 > - `string[] names = { "Inaxys", "CueBrick", "Tetra" };`{.cs}
 
+## Warning !
+
+```cs
+int foo = 6;
+int bar = foo;
+bar = 25
+```
+> - What is the value of foo ?
+> - 6
+
+> - What is the value of bar ?
+> - 25
+
+## Warning !
+
+```cs
+int[] foo = { 20, 20 };
+int[] bar = foo;
+bar[1] = 22;
+```
+
+> - What is the value of bar ?
+> - { 20, 22 }
+
+> - What is the value of foo ?
+> - { 20, 22 }
+
 ## Operators
 
 > - `int theAnswer = 2 + 2;`{.cs}
@@ -138,71 +165,89 @@ public class HelloWorld {
 > - `&&`{.cs}
 > - `||`{.cs}
 
-## Bitwise operators
+## Bitwise operators - Not
+
+![Not Table](img/not.png)
+
+## Bitwise operators - Not
 
 > - `unsigned i = 5;`{.cs}
-> - base 2: i = 101
 > - `i = ~i;`{.cs}
-> - base 10: i = 2
-> - base 2: i = 010
+> - `// i = 2`{.cs}
+
+> - `~101`
+> - `----`
+> - `.010`
+
+## Bitwise operators - And
+
+![And Table](img/and.png)
+
+## Bitwise operators - And
+
+> - `unsigned i = 2;`{.cs}
 > - `i = i & 3;`{.cs}
-> - base 10: i = 2
-> - base 2: i = 010
+> - `// i = 2`{.cs}
+
+> - `.010`
+> - `&011`
+> - `----`
+> - `.010`
+
+## Bitwise operators - Or
+
+![Or Table](img/or.png)
+
+## Bitwise operators - Or
+
+> - `unsigned i = 2;`{.cs}
 > - `i = i | 5;`{.cs}
-> - base 10: i = 7
-> - base 2: i = 111
+> - `// i = 7`{.cs}
+> - `.010`
+> - `|101`
+> - `----`
+> - `.111`
+
+## Bitwise operators - Xor
+
+![Xor Table](img/xor.png)
 
 ## Bitwise operators
 
-> - `^(=)`
-> - `<<(=)`
-> - `>>(=)`
+> - `unsigned i = 10;`{.cs}
+> - `i = i ^ 6`{.cs}
+> - `// i = 12`{.cs}
 
-## Exemples
+> - `1010`
+> - `0110`
+> - `----`
+> - `1100`
 
-```cs
-int[] fibonacci = { 0, 1, 1, 2, 3, 5, 8, 13, 21 };
-// fibonacci = { 0, 1, 1, 2, 3, 5, 8, 13, 21 }
-bool randomTest = (fibonacci[2] + fibonacci[5]) == 6
-                  && fibonacci[0] == fibonacci[1];
-// randomTest = false
-int pow_two = 1;
-// base 2 : pow_two = 000000001
-// pow_two = 1
-pow_two <<= 6;
-// base 2 : pow_two = 001000000
-// pow_two = 64
-pow_two ^= 96;
-// base 2 : pow_two = 000100000
-// pow_two = 32
-```
+## Bitwise operators - Shift
 
-## Warning !
+> - `unsigned power = 3;`{.cs}
+> - `power: 0011`
+> - `// power = 3;`{.cs}
+> - `unsigned power = power << 1;`{.cs}
+> - `power: 0110`
+> - `// power = 6;`{.cs}
+> - `power <<= 1;`{.cs}
+> - `power: 1100`
+> - `// power = 12`{.cs}
 
-```cs
-int foo = 6;
-int bar = foo;
-bar = 25
-```
-> - What is the value of foo ?
-> - 6
+> - What do you notice on power ?
+> - Left shift multiply the number by n shift
 
-> - What is the value of bar ?
-> - 25
+## Bitwise operators - Shift
 
-## Warning !
+> - `unsigned power = 12;`{.cs}
+> - `power: 1100`
+> - `// power = 12`{.cs}
+> - `power >>= 3;`{.cs}
+> - `power <<= 2;`{.cs}
 
-```cs
-int[] foo = { 20, 20 };
-int[] bar = foo;
-bar[1] = 22;
-```
-
-> - What is the value of bar ?
-> - { 20, 22 }
-
-> - What is the value of foo ?
-> - { 20, 22 }
+> - What is the value of power ?
+> - power = 8 because we lost one bit with a big shift
 
 ## Functions
 
