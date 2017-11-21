@@ -69,81 +69,91 @@ public class HelloWorld {
 ## Types initialization
 
 > - Undeclared
-> - `<type> <name>;`
+> - `int theAnswer;`{.cs}
 > - Declared but still uninitialized
-> - `<name> = <value>;`
+> - `theAnswer = 42;`{.cs}
 > - Initialized
+
+> - A little too long ?
 
 ## Types initialization
 
 > - Undeclared
-> - `<type> <name> = <value>;`
+> - `int theAnswer = 42;`{.cs}
 > - Initialized
 
 ## Arrays
 
-```cs
-<type>[] <name>;
-<type>[] <name> = <variable>;
-<type>[] <name> = new <type>[size];
-```
+> - `int[] intTab;`{.cs}
+> - `int[] fibo = { 0, 1, 1, 2, 3, 5, 8, 13, 21 };`{.cs}
+> - `int[] zeroArray = new int[10];`{.cs}
+
 
 ## Initialization - Examples
 
-```cs
-char dab = '\t';
-int theAnswer = 42;
-float goldRatio = 1.6180f;
-string deadLine = "These violent deadlines have
-                   violent ends";
-bool youAreCheaters = true;
+> - `char nine = 9;`{.cs}
+> - `char nineAlso = '\t';`{.cs}
+> - `float goldenRatio = 1.6180f;`{.cs}
+> - `string deadLine = "These violent deadlines have violent ends";`{.cs}
+> - `bool youAreInEpita = true;`{.cs}
 
-int[] randomArray = new int[10];
-int[] fibonacci = { 0, 1, 1, 2, 3, 5, 8, 13, 21 };
-```
+> - `float[] floatArray = new float[10];`{.cs}
+> - `string[] names = { "Inaxys", "CueBrick", "Tetra" };`{.cs}
 
 ## Operators
 
-> - `+(=)`
-> - `++`
-> - `-(=)`
-> - `--`
-> - `*(=)`
-> - `/(=)`
-> - `%(=)`
+> - `int theAnswer = 2 + 2;`{.cs}
+> - `// theAnswer = 4;`{.cs}
+> - `theAnswer = theAnswer + 2;`{.cs}
+> - `// theAnswer = 6;`{.cs}
+> - How to simplify this ?
+> - `theAnswer += 2;`{.cs}
+> - `// theAnswer = 8;`{.cs}
+> - `theAnswer++;`{.cs}
+> - `// theAnswer = 9;`{.cs}
+
+## Operators
+
+> - `-(=)`{.cs}
+> - `*(=)`{.cs}
+> - `/(=)`{.cs}
+> - `%(=)`{.cs}
+> - `int theAnswer = 6;`{.cs}
+> - `theAnswer *= 2 + 10 % 7 + 1 * 2;`{.cs}
+> - What is the value of theAnswer ?
+> - theAnswer = 42
+
 
 ## Comparison operators
 
-> - `==`
-> - `!=`
-> - `<(=)`
-> - `>(=)`
-
-## Examples
-
-```cs
-int theAnswer = 2 * 4 + 2;
-// theAnswer = 10
-theAnswer *= 4;
-// theAnswer = 40
-theAnswer += 2;
-// theAnswer = 42
-bool isTheAnswer = theAnswer == 42;
-// isTheAnswer = true
-bool isEven = theAnswer % 2 == 0;
-// isEven = true
-```
+> - `int theAnswer = 42`{.cs}
+> - `bool isTheAnswer = (theAnswer == 42);`{.cs}
+> - `bool isNotTheAnswer = (theAnswer != 42);`{.cs}
+> - `<(=)`{.cs}
+> - `>(=)`{.cs}
 
 ## Logical operators
 
-> - `&&`
-> - `||`
+> - How to combine multiple boolean ?
+> - `&&`{.cs}
+> - `||`{.cs}
 
 ## Bitwise operators
 
-> - '!'
-> - `&(=)`
-> - `|(=)`
+> - `unsigned i = 5;`{.cs}
+> - base 2: i = 101
+> - `i = ~i;`{.cs}
+> - base 10: i = 2
+> - base 2: i = 010
+> - `i = i & 3;`{.cs}
+> - base 10: i = 2
+> - base 2: i = 010
+> - `i = i | 5;`{.cs}
+> - base 10: i = 7
+> - base 2: i = 111
+
+## Bitwise operators
+
 > - `^(=)`
 > - `<<(=)`
 > - `>>(=)`
@@ -177,97 +187,83 @@ bar = 25
 > - What is the value of foo ?
 > - 6
 
+> - What is the value of bar ?
+> - 25
+
 ## Warning !
 
 ```cs
 int[] foo = { 20, 20 };
 int[] bar = foo;
-bar[0] = 19;
-foo[1] = 97;
+bar[1] = 22;
 ```
 
+> - What is the value of bar ?
+> - { 20, 22 }
+
 > - What is the value of foo ?
-> - { 19, 97 }
+> - { 20, 22 }
 
 ## Functions
 
 ```cs
-<type> <functionName>(<type1> <argName1>, <type2> <argName2>,
-                      ...)
-{
-  //Do things
-  return <value of type <type>>
-}
-```
-
-## Functions - Examples
-
-```cs
 string bridge()
 {
-  return "You fools !";
-}
-
-void happyBirthday(string name, int age)
-{
-  Console.WriteLine("Happy Birthday " + name +
-                    " ! You are " + age + " years old now !");
+  return "you fools !";
 }
 ```
 
-> - Why happyBirthDay has void as a return type ?
-> - It writes the string into the console.
+> - `string str = bridge();`{.cs}
+> - `// str = "you fools !"`{.cs}
 
-## Functions calls
+## Functions
 
 ```cs
-string fly = bridge();
-// fly = "You fools !"
-happyBirthday("Cyril", 22);
-Happy Birthday Cyril ! You are 22 years old now !"
+void quoteMe(string end)
+{
+  Console.WriteLine("Fly, " + end);
+}
 ```
+
+> - `// str = "you fools !"`{.cs}
+> - `str = quoteMe(str);`{.cs}
+> - `// str = "you fools !";`{.cs}
+> - `Fly, you fools !`
+
+> - Why the string str didn't change ?
+> - The string in quoteMe isn't return !
 
 ## Arguments passed by reference
 
 ```cs
-<type> <functionName>(ref <type1> <argName1>,
-                      ref <type2> <argName2>, ...)
+void setValue(int x)
 {
-  //Do things
-  return <value of type <type>>
+  x = 0;
 }
 ```
 
-## Arguments passed by reference - Examples
+> - `int val = 10;`{.cs}
+> - `setValue(val);`{.cs}
+
+> - What is the value of val ?
+> - val = 10
+
+## Arguments passed by reference
 
 ```cs
-void setValue(ref int x, int y, int i, int j)
+void setValue(ref int x)
 {
-  x = i;
-  y = j;
+  x = 0;
 }
 ```
 
-> - What will be the value inside and outside the function ?
+> - `int val = 10;`{.cs}
+> - `setValue(ref val);`{.cs}
 
-## Functions calls
+> - What is the value of val ?
+> - val = 0
 
-```cs
-int x = 0;
-int y = 0;
-setValue(ref x, y, 36, 30);
-setValue(ref x, 30, 36, y);
-setValue(ref 10, 14, 36, 30);
-```
-
-> - What is the value of x and y after the first call ?
-> - x = 36 and y = 0
-> - What is the value of x and y after the second call ?
-> - x = 36 and y = 0
-> - What is the value of x and y after the third call ?
-> - There is an error
-
-# Questions ?
+## Questions ?
 
 # Imperative programming
 
@@ -281,21 +277,30 @@ setValue(ref 10, 14, 36, 30);
 ## Control structures - if
 
 ```cs
-if (<condition1>)
+int promo = ...;
+bool acdcu = ...;
+if (promo == 2020 && acdcu)
 {
-  // <condition1> is true
-}
-else if (<condition2>) // Optional
-{
-  // <condition1> is false and <condition2> is true
-}
-else // Optional
-{
-  // <condition1> and <condition2> are false
+  Console.WriteLine("Hi ! I'm Ferdinand !");
 }
 ```
 
-## Examples - if
+## Control structures - if
+
+```cs
+int promo = ...;
+bool acdcu = ...;
+if (promo == 2020 && acdcu)
+{
+  Console.WriteLine("Hi ! I'm Ferdinand !");
+}
+else
+{
+  Console.WriteLine("I'm still too young :'( !");
+}
+```
+
+## Control structures - if
 
 ```cs
 int promo = ...;
@@ -317,58 +322,63 @@ else
 ## Control structures - ternary
 
 ```cs
-<condition1> ? /* condition1 is true */
-             : /* condition1 is false*/;
+int n = ...;
+int abs = (n >= 0) ? n : -n;
 ```
 
 > - ? is the if
 > - : is the else
-> - How can we do a if else \<condition2> ?
-> -   \<condition1> ? /* \<condition1> is true*/
-                        : \<condition2> ? /* <condition1> is
-                        false and <condition2> is true */
-                        : /* <contition1> and <condition2>
-                        are false*/;
 > - usefull to shorten your code
 
-## Examples - ternary
+## Control structures - ternary
 
 ```cs
 int n = ...;
-int abs = n >= 0 ? n : 0;
+int abs = (n >= 0) ? n : -n;
 ```
 
 > - What is the value of abs ?
-> - if n is negative abs is null else it's n
+> - If n is negative abs is the absolute value of n else it's n
+> - In all case, abs is |n|
 
 ## Control structures - switch
 
 ```cs
-switch (<variable>)
+unsigned moyenne = ...;
+if (moyenne == 0)
 {
-  case <case1>:
-    // <variable> == <case1>
-    break;
-  case <case2>:
-    // <variable> == <case2>
-    break;
-  case :
-    // <variable> is does not match to <case1> or <case2>
-    break;
+  Console.WriteLine("Substract one and it's perfect !");
 }
+else if (moyenne == 10)
+{
+  Console.WriteLine("Keep working !");
+}
+else if (moyenne == 20)
+  Console.WriteLine("Perfect !");
+else
+  Console.WriteLine("Wut ?");
 ```
 
-## Examples - switch
+> - How think it's ugly ?
+> - It is ...
+
+## Control structures - switch
 
 ```cs
-string girl_name = ...;
-switch (name)
+unsigned moyenne = ...;
+switch (moyenne)
 {
-  case "no name":
-    Console.WriteLine("A girl has no name");
+  case 0:
+    Console.WriteLine("Substract one and it's perfect !");
     break;
-  case :
-    Console.WriteLine("You are not ready " + name);
+  case 10:
+    Console.WriteLine("Keep working !");
+    break;
+  case 20:
+    Console.WriteLine("Perfect !");
+    break;
+  default:
+    Console.WriteLine("Wut ?");
     break;
 }
 ```
@@ -376,75 +386,103 @@ switch (name)
 ## Control structures - while & do while
 
 ```cs
-while (<condition>)
+string girl_name = ...;
+while (girl_name != "no one")
 {
-  // loop until <condition> is false
+  slap(girl_name);
+  Console.WriteLine("You are not ready " + name);
+  girl_name = answer();
 }
-
-do {
-  // do this then test the condition
-  // and loop if <condition> is true
-} while (<condition>);
+Console.WriteLine("A girl has no name");
 ```
 
-## Examples - while & do while
+> - How long can we stay in the while ?
+> - `girl_name = "Marie"`
+> - `You are not ready Marie`
+> - `girl_name = "Camille"`
+> - `You are not ready Camille`
+> - `girl_name = "Charlotte"`
+> - `You are not ready Charlotte`
+
+## Control structures - while & do while
 
 ```cs
-bool found_charlie = false;
-while (!found_charlie)
+string girl_name = ...;
+while (girl_name != "no one")
 {
-  Console.WriteLine("Where is Charlie ?");
-  found_charlie = find_location();
+  slap(girl_name);
+  Console.WriteLine("You are not ready " + name);
+  girl_name = answer();
 }
-Console.WriteLine("Yes ! Charlie is in the kitchen !");
+Console.WriteLine("A girl has no name");
 ```
 
-## Examples - while & do while
+> - `girl_name = "Jeanne"`
+> - `You are not ready Jeanne`
+> - `girl_name = "Lou"`
+> - `You are not ready Lou`
+> - `girl_name = "no one"`
+> - `A girl has no name`
+
+## Control structures - while & do while
 
 ```cs
-bool found_charlie = false;
-do {
-  Console.WriteLine("Where is Charlie ?");
-  found_charlie = find_location();
-} while (!found_charlie);
-Console.WriteLine("Yes ! Charlie is in the kitchen !");
+Console.WriteLine("Type a number please");
+char res = Console.ReadKey();
+while (res < '0' || res > '9')
+{
+  Console.WriteLine("Type a number please");
+  res = Console.ReadKey();
+}
+Console.WriteLine("Finaly you got it ...");
 ```
 
-> - What is the difference between the two loops ?
-> - While test first the condition wheras
-    do while first execute body
+> - What is ugly here ?
+> - The Console.WriteLine and the Console.ReadKey are typed twice.
+> - Can we do something ?
+
+## Control structures - while & do while
+
+```cs
+char res;
+do
+{
+  Console.WriteLine("Type a number please");
+  res = Console.ReadKey();
+} while (res < '0' || res > '9');
+Console.WriteLine("Finaly you got it ...");
+```
+
+> - It makes more sense like this ...
+
+## Control structures - while & do while
+
+```cs
+string[] names = { "Inaxys", "CueBrick", "Tetra" };
+int i = 0;
+while (i < names.Count)
+{
+  Console.WriteLine(names[i] + " is in the place !");
+  ++i;
+}
+```
+
+> - The integer i is in 3 different places, can we reduce ?
 
 ## Control structures - for
 
 ```cs
-for (<initial>; <condition>; <instruction>)
+string[] names = { "Inaxys", "CueBrick", "Tetra" };
+for (int i = 0; i < names.Count; ++i)
 {
-  // loop until <condition> is false
-  // and execute <instruction> after a loop
+  Console.WriteLine(names[i] + " is in the place !");
 }
 ```
 
-## Examples - for
-
-```cs
-int n = 0;
-for (int i = 0; i < 100; ++i)
-{
-  n += i;
-}
-// n = 5050
-```
+> - It's quit better but ...
+> - Can we do better ?
 
 ## Control structures - foreach
-
-```cs
-foreach (<type> <name> in <collection>)
-{
-  // loop in the entire <collection>
-}
-```
-
-## Examples - foreach
 
 ```cs
 string[] names = { "Inaxys", "CueBrick", "Tetra" };
@@ -454,10 +492,10 @@ foreach (string name in names)
 }
 ```
 
-> - Can we modify the variable in a foreach loop ?
-> - Never do this
+> - It's is finally clean !
+> - One rule: never modify the loop variable in a foreach !
 
-## Questions ?
+# Questions ?
 
 # Object Oriented Programming
 
