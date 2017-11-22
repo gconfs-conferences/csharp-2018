@@ -785,7 +785,7 @@ public class ACDC {
     this._intranet_password = passwd;
   }
 
-  public AskKindlyToChangeName(string new_name) {
+  public void AskKindlyToChangeName(string new_name) {
     this._name = new_name;
     this._tshirt_name = new_name;
   }
@@ -812,11 +812,11 @@ public class ACDC {
 
 ## Visual example
 
-![ACDC and ASM shared the attributes of Assisstant](img/inheritance.png)
+![ACDC and ASM shared the attributes of Assistant](img/inheritance.png)
 
 ## In Code
 
-Generic Assisstant class
+Generic Assistant class
 ```cs
 class Assistant
 {
@@ -835,12 +835,12 @@ class Assistant
 
 ACDC Class
 ```cs
-class ACDC : Assistant // Inherits from Assisstant
+class ACDC : Assistant // Inherits from Assistant
 {
   private int _caml_skills;
 
   public ACDC(string name, int skills):
-         base(name, Color.Brown) // Assisstant constructor
+         base(name, Color.Brown) // Assistant constructor
   {
     /* No need to initialize _nickname and _tshirt_color */
     this._caml_skills = skills;
@@ -856,12 +856,12 @@ class ACDC : Assistant // Inherits from Assisstant
 
 ASM Class
 ```cs
-class ASM : Assisstant /* Also inherits from Assisstant */
+class ASM : Assistant /* Also inherits from Assistant */
 {
   private bool _emacs_lover;
 
   public ASM(string name, bool emacs):
-         base(name, Color.Grey) // Assisstant constructor
+         base(name, Color.Grey) // Assistant constructor
   {
     /* No need to initialize _nickname and _tshirt_color */
     this._emacs_lover = emacs;
