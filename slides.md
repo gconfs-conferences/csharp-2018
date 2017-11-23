@@ -692,7 +692,7 @@ foreach (string name in names)
 > - It's finally clean !
 > - One rule: never modify the loop variable in a foreach !
 
-# Questions ?
+## Questions ?
 
 # Object Oriented Programming
 
@@ -752,17 +752,17 @@ public static void Main(string[] args)
 
 ## Instantiating an object
 
-* Instantiating is 'creating'
-* the keyword: **new**
-* the class constructor: a special method
+> - Instantiating is 'creating'
+> - the keyword: **new**
+> - the class constructor: a special method
 
 ## Constructor
 
-* what is it?
-* instanciate an object
-* you can have several constructor per class
-* there is a default one if none is given
-* initialize the fields
+> - what is it?
+> - instanciate an object
+> - you can have several constructor per class
+> - there is a default one if none is given
+> - initialize the fields
 
 ## Example
 
@@ -817,9 +817,9 @@ public static void Main(string[] args)
 
 ## Static fields
 
-* Common to every instance of a class
-* Cannot be accessed from instance
-* Cannot be accessed with **this**.
+> - Common to every instance of a class
+> - Cannot be accessed from instance
+> - Cannot be accessed with **this**.
 
 ## Example
 
@@ -1051,9 +1051,8 @@ foreach(Human person in people)
 
 ## Namespace
 
-* Scopes where a set of related classes is implemented.
-* Namespaces may nest, sub-namespaces are accessed using ..
-* Namespaces use visibility. One can declared a class as private (only accessible in the current namespace) or public (accessible from anywhere).
+> - Scopes where a set of related classes is implemented.
+> - Namespaces use visibility. One can declared a class as private (only accessible in the current namespace) or public (accessible from anywhere).
 
 ## Example
 
@@ -1101,7 +1100,7 @@ class Human
 Human daddy = new Human(white, green);
 Human mommy = new Human(black, brown);
 
-Human baby = daddy + mommy; // metis and brown eyes, ofc
+Human baby = daddy + mommy; // metis and brown eyes, genetics duh!
 ```
 
 ## Exceptions
@@ -1201,18 +1200,13 @@ Stack<ACDC> stack = null;
 
 foreach(var acdc in acdcs)
   stack = new Stack<ACDC>(acdc, stack);
-// stack = inaxys -> chokapeek -> treta
-//-> CueBrick -> Garage -> Kirzkjdnsie -> null
+// stack = inaxys -> chokapoke -> tretagenaire
+//-> brique -> Garage -> Kirzkjdnsie -> null
 
 double four = stack.Pop().Pop().Peek();
 
 Stack<ACDC> tail = stack.Pop();
 ```
-
-## SURPRISE OCAML
-
-* you thought it would go away?
-* Ha, NEVER!
 
 ## Functionnal programming
 
@@ -1270,4 +1264,4 @@ greetings("All");
 // Bye All
 ```
 
-## Questions
+## Questions? 
