@@ -127,15 +127,70 @@ bar[1] = 22;
 > - What is the value of foo ?
 > - { 20, 22 }
 
+## Comments
+
+> - What is comments ?
+> - Is it eatable ?
+
+> - Is it useful ?
+> - Of course, it's to explicit your code !
+
+## Comments - Exemples
+
+```cs
+int a = 1;
+int b = 6;
+int c = 0;
+
+// Jung ner lbh qbvat ? Fgbc gbhpuvat zl pbqr !
+int delta = (b * b) - 4 * a * c;
+```
+
+> - Is the syntax correct ?
+> - The compiler doesn't check comments !
+
+## Comments - Exemples
+
+```cs
+int a = 1;
+int b = 6;
+int c = 0;
+
+// delta is the resolution of a polynomial function of degree
+// two with a, b and c as a coefficient
+int delta = (b * b) - 4 * a * c;
+```
+
+> - Decribe the ununderstandable code
+
+## Comments - Exemples
+
+```cs
+/*
+int a = 1;
+int b = 6;
+int c = 0;
+
+delta is the resolution of a polynomial function of degree
+two with a, b and c as a coefficient */
+int delta = (b * b) - 4 * a * c;
+```
+
+> - There is a problem ...
+> - The comments are not compiled so the code will not compile
+
 ## Operators
 
 > - `int theAnswer = 2 + 2;`{.cs}
 > - `// theAnswer = 4;`{.cs}
+
 > - `theAnswer = theAnswer + 2;`{.cs}
 > - `// theAnswer = 6;`{.cs}
+
 > - How to simplify this ?
 > - `theAnswer += 2;`{.cs}
 > - `// theAnswer = 8;`{.cs}
+
 > - `theAnswer++;`{.cs}
 > - `// theAnswer = 9;`{.cs}
 
@@ -145,33 +200,41 @@ bar[1] = 22;
 > - `*(=)`{.cs}
 > - `/(=)`{.cs}
 > - `%(=)`{.cs}
+
 > - `int theAnswer = 6;`{.cs}
 > - `theAnswer *= 2 + 10 % 7 + 1 * 2;`{.cs}
+
 > - What is the value of theAnswer ?
 > - theAnswer = 42
 
 
 ## Comparison operators
 
-> - `int theAnswer = 42`{.cs}
+> - `int theAnswer = 42;`{.cs}
+
 > - `bool isTheAnswer = (theAnswer == 42);`{.cs}
 > - `bool isNotTheAnswer = (theAnswer != 42);`{.cs}
+
 > - `<(=)`{.cs}
 > - `>(=)`{.cs}
 
 ## Logical operators
 
 > - How to combine multiple boolean ?
+
 > - `&&`{.cs}
 > - `||`{.cs}
 
 > - And if we want to negate a boolean ?
+
 > - `!`{.cs}
 
 ## Logic everywhere
 
 > - Numbers are represented by bits in the computer
+
 > - Indeed true and false are like 1 and 0
+
 > - And if we want to do operation on these bits ?
 
 ## Bitwise operators - Not
@@ -215,7 +278,7 @@ bar[1] = 22;
 ## Bitwise operators - Xor
 
 > - `byte i = 194;`{.cs}
-> - `i = i ^ 71`{.cs}
+> - `i = i ^ 71;`{.cs}
 > - `// i = 133`{.cs}
 
 ![Xor Table](img/xor.png){ width=45% height=20% }
@@ -228,16 +291,22 @@ bar[1] = 22;
 ## Bitwise operators - Shift
 
 > - `byte power = 3;`{.cs}
-> - `// power = 3;`{.cs}
-> - `power: 00000011`
+> - `00000011`{.cs}
+> - `// power = 3`{.cs}
 
 > - `power = power << 1;`{.cs}
-> - `// power = 6;`{.cs}
-> - `power: 00000110`
+> - `00000011`{.cs}
+> - `-----<--`{.cs}
+> - `00000110`{.cs}
+> - `// power = 6`{.cs}
+
+## Bitwise operators - Shift
 
 > - `power <<= 1;`{.cs}
+> - `00000110`{.cs}
+> - `-----<--`{.cs}
+> - `00001100`{.cs}
 > - `// power = 12`{.cs}
-> - `power: 00001100`
 
 > - What do you notice on power ?
 > - Left shift multiply the number by n shift
@@ -246,7 +315,8 @@ bar[1] = 22;
 
 > - `byte power = 12;`{.cs}
 > - `// power = 12`{.cs}
-> - `power: 00001100`
+> - `00001100`{.cs}
+
 > - `power >>= 3;`{.cs}
 > - `power <<= 2;`{.cs}
 
@@ -256,11 +326,11 @@ bar[1] = 22;
 
 > - `byte power = 12;`{.cs}
 
-> - `power: 00001100`
-> - `----------->>>-`
-> - `power: 00000001`
-> - `-------------<<`
-> - `power: 00000100`
+> - `00001100`{.cs}
+> - `---->>>-`{.cs}
+> - `00000001`{.cs}
+> - `------<<`{.cs}
+> - `00000100`{.cs}
 
 > - `// power = 4`{.cs}
 
@@ -320,6 +390,39 @@ void setValue(ref int x)
 
 > - What is the value of val ?
 > - val = 0
+
+## Visibility
+
+```cs
+void awesome()
+{
+  int awesomeness = 9001; // Over 9000
+
+  Console.WriteLine("Awesomeness: " + awesomeness);
+}
+
+Console.WriteLine("Awesomeness: " + awesomeness);
+```
+
+> - What will be written in the console ?
+> - It won't even compile !
+
+## Visibility
+
+```cs
+void awesome()
+{
+  int awesomeness = 9001; // Over 9000
+
+  Console.WriteLine("Awesomeness: " + awesomeness);
+}
+
+Console.WriteLine("Awesomeness: " + awesomeness);
+```
+
+> - A scope is a block of code
+> - Nested with brackets `{ }`
+> - Everything you create within a scope is not visible outside
 
 ## Questions ?
 
@@ -386,7 +489,7 @@ if (promo == 2020 && acdcu)
 {
   Console.WriteLine("Hi ! I'm Ferdinand !");
 }
-else if (promo == 2020 && !acdcu)
+else if (promo == 2020)
 {
   Console.WriteLine("Hello ! I'm your ACDC !");
 }
@@ -452,7 +555,6 @@ else
 
 ```cs
 unsigned moyenne = ...;
-
 switch (moyenne)
 {
   case 0:
@@ -490,8 +592,6 @@ Console.WriteLine("A girl has no name");
 > - `You are not ready Marie`{.cs}
 > - `girl_name = "Camille"`{.cs}
 > - `You are not ready Camille`{.cs}
-> - `girl_name = "Charlotte"`{.cs}
-> - `You are not ready Charlotte`{.cs}
 
 ## Control structures - while & do while
 
@@ -510,8 +610,6 @@ Console.WriteLine("A girl has no name");
 
 > - `girl_name = "Jeanne"`{.cs}
 > - `You are not ready Jeanne`{.cs}
-> - `girl_name = "Lou"`{.cs}
-> - `You are not ready Lou`{.cs}
 > - `girl_name = "no one"`{.cs}
 > - `A girl has no name`{.cs}
 
@@ -563,7 +661,7 @@ while (i < names.Count)
 }
 ```
 
-> - The integer i is in 3 different places, can we reduce ?
+> - The integer i is in 4 different places, can we reduce ?
 
 ## Control structures - for
 
@@ -577,6 +675,7 @@ for (int i = 0; i < names.Count; ++i)
 ```
 
 > - It's quit better but ...
+> - We still have 3 i in the same line plus one in the loop
 > - Can we do better ?
 
 ## Control structures - foreach
@@ -769,31 +868,6 @@ public static main(string[] args)
   MY_MATH.Power(2, 2); // = 4
 }
 ```
-
-# Visibility
-
-# Scope visibility
-
-## Visibility
-
-```cs
-if (name == "Inaxys" || name == "Tetra")
-{
-  int awesomeness = 9001; // Over 9000
-
-  Console.WriteLine("Awesomeness: " + awesomeness);
-}
-Console.WriteLine("Awesomeness: " + awesomeness);
-```
-
-> - What will be written in the console ?
-> - **It won't even compile !**
-
-## What is a scope
-
-> - A scope is a block of code
-> - Nested with brackets `{ }`
-> - Everything you create within a scope is not visible outside
 
 # Class members visibility
 
