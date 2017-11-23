@@ -60,7 +60,6 @@ public class HelloWorld {
 
 > - Developed by Microsoft
 > - Software Framework
-> - Includes large class library (FCL)
 > - Language interoperability
 > - Open sources
 
@@ -91,10 +90,11 @@ public class HelloWorld {
 
 ## Initialization - Examples
 
-> - `char nine = 9;`{.cs}
-> - `char nineAlso = '\t';`{.cs}
+> - `char nine = '9';`{.cs}
+> - `char nineAlso = 57;`{.cs}
 > - `float goldenRatio = 1.6180f;`{.cs}
-> - `string deadLine = "These violent deadlines have violent ends";`{.cs}
+> - `string deadLine = "These violent deadlines"`{.cs}
+                      `"have violent ends";`{.cs}
 > - `bool youAreInEpita = true;`{.cs}
 
 > - `float[] floatArray = new float[10];`{.cs}
@@ -165,89 +165,104 @@ bar[1] = 22;
 > - `&&`{.cs}
 > - `||`{.cs}
 
+> - And if we want to negate a boolean ?
+> - `!`{.cs}
+
+## Logic everywhere
+
+> - Numbers are represented by bits in the computer
+> - Indeed true and false are like 1 and 0
+> - And if we want to do operation on these bits ?
+
 ## Bitwise operators - Not
 
-![Not Table](img/not.png)
-
-## Bitwise operators - Not
-
-> - `unsigned i = 5;`{.cs}
+> - `byte i = 194;`{.cs}
 > - `i = ~i;`{.cs}
-> - `// i = 2`{.cs}
+> - `// i = 61`{.cs}
 
-> - `~101`
-> - `----`
-> - `.010`
+![Not Table](img/not.png){ width=50% height=25% }
 
-## Bitwise operators - And
-
-![And Table](img/and.png)
+> - `~11000010`
+> - `---------`
+> - `00111101`
 
 ## Bitwise operators - And
 
-> - `unsigned i = 2;`{.cs}
-> - `i = i & 3;`{.cs}
-> - `// i = 2`{.cs}
+> - `byte i = 194;`{.cs}
+> - `i = i & 71;`{.cs}
+> - `// i = 66`{.cs}
 
-> - `.010`
-> - `&011`
-> - `----`
-> - `.010`
+![And Table](img/and.png){ width=45% height=20% }
 
-## Bitwise operators - Or
-
-![Or Table](img/or.png)
+> - `11000010`
+> - `&01000111`
+> - `---------`
+> - `01000010`
 
 ## Bitwise operators - Or
 
-> - `unsigned i = 2;`{.cs}
-> - `i = i | 5;`{.cs}
-> - `// i = 7`{.cs}
-> - `.010`
-> - `|101`
-> - `----`
-> - `.111`
+> - `byte i = 194;`{.cs}
+> - `i = i | 71;`{.cs}
+> - `// i = 199`{.cs}
+
+![Or Table](img/or.png){ width=45% height=20% }
+
+> - `110000010`
+> - `|010000111`
+> - `----------`
+> - `110000111`
 
 ## Bitwise operators - Xor
 
-![Xor Table](img/xor.png)
+> - `byte i = 194;`{.cs}
+> - `i = i ^ 71`{.cs}
+> - `// i = 133`{.cs}
 
-## Bitwise operators
+![Xor Table](img/xor.png){ width=45% height=20% }
 
-> - `unsigned i = 10;`{.cs}
-> - `i = i ^ 6`{.cs}
-> - `// i = 12`{.cs}
-
-> - `1010`
-> - `0110`
-> - `----`
-> - `1100`
+> - `11000010`
+> - `^01000111`
+> - `---------`
+> - `10000101`
 
 ## Bitwise operators - Shift
 
-> - `unsigned power = 3;`{.cs}
-> - `power: 0011`
+> - `byte power = 3;`{.cs}
 > - `// power = 3;`{.cs}
-> - `unsigned power = power << 1;`{.cs}
-> - `power: 0110`
+> - `power: 00000011`
+
+> - `power = power << 1;`{.cs}
 > - `// power = 6;`{.cs}
+> - `power: 00000110`
+
 > - `power <<= 1;`{.cs}
-> - `power: 1100`
 > - `// power = 12`{.cs}
+> - `power: 00001100`
 
 > - What do you notice on power ?
 > - Left shift multiply the number by n shift
 
 ## Bitwise operators - Shift
 
-> - `unsigned power = 12;`{.cs}
-> - `power: 1100`
+> - `byte power = 12;`{.cs}
 > - `// power = 12`{.cs}
+> - `power: 00001100`
 > - `power >>= 3;`{.cs}
 > - `power <<= 2;`{.cs}
 
 > - What is the value of power ?
-> - power = 8 because we lost one bit with a big shift
+
+## Bitwise operators - Shift
+
+> - `byte power = 12;`{.cs}
+
+> - `power: 00001100`
+> - `----------->>>-`
+> - `power: 00000001`
+> - `-------------<<`
+> - `power: 00000100`
+
+> - `// power = 4`{.cs}
 
 ## Functions
 
@@ -272,11 +287,9 @@ void quoteMe(string end)
 
 > - `// str = "you fools !"`{.cs}
 > - `str = quoteMe(str);`{.cs}
-> - `// str = "you fools !";`{.cs}
-> - `Fly, you fools !`
+> - What ...?
 
-> - Why the string str didn't change ?
-> - The string in quoteMe isn't return !
+> - Impossible because the return type of quoteMe is void, so we can't retrieve anything from the function !
 
 ## Arguments passed by reference
 
@@ -314,7 +327,7 @@ void setValue(ref int x)
 
 ## What is imperative?
 
-> - You do what I want
+> - The computer is my slave
 > - Do my exam
 > - If I'm tired make me sleep
 > - While I sleep clean my dishes
@@ -324,6 +337,7 @@ void setValue(ref int x)
 ```cs
 int promo = ...;
 bool acdcu = ...;
+
 if (promo == 2020 && acdcu)
 {
   Console.WriteLine("Hi ! I'm Ferdinand !");
@@ -335,13 +349,14 @@ if (promo == 2020 && acdcu)
 ```cs
 int promo = ...;
 bool acdcu = ...;
+
 if (promo == 2020 && acdcu)
 {
   Console.WriteLine("Hi ! I'm Ferdinand !");
 }
-else
+else if (promo == 2020 && !acdcu)
 {
-  Console.WriteLine("I'm still too young :'( !");
+  Console.WriteLine("Hello ! I'm your ACDC !");
 }
 ```
 
@@ -350,6 +365,23 @@ else
 ```cs
 int promo = ...;
 bool acdcu = ...;
+
+if (promo == 2020 && acdcu)
+{
+  Console.WriteLine("Hi ! I'm Ferdinand !");
+}
+else if (promo == 2020)
+{
+  Console.WriteLine("Hello ! I'm your ACDC !");
+}
+```
+
+## Control structures - if
+
+```cs
+int promo = ...;
+bool acdcu = ...;
+
 if (promo == 2020 && acdcu)
 {
   Console.WriteLine("Hi ! I'm Ferdinand !");
@@ -360,7 +392,7 @@ else if (promo == 2020 && !acdcu)
 }
 else
 {
-  Console.WriteLine("I'm still too young :'( !");
+  Console.WriteLine("I'm still too young / old :'( !");
 }
 ```
 
@@ -373,16 +405,28 @@ int abs = (n >= 0) ? n : -n;
 
 > - ? is the if
 > - : is the else
-> - usefull to shorten your code
+> - useful to shorten your code
 
 ## Control structures - ternary
 
 ```cs
-int n = ...;
+int n = -42;
 int abs = (n >= 0) ? n : -n;
 ```
 
 > - What is the value of abs ?
+> - 42
+
+## Control structures - ternary
+
+```cs
+int n = 2020;
+int abs = (n >= 0) ? n : -n;
+```
+
+> - What is the value of abs ?
+> - 2020
+
 > - If n is negative abs is the absolute value of n else it's n
 > - In all case, abs is |n|
 
@@ -390,14 +434,11 @@ int abs = (n >= 0) ? n : -n;
 
 ```cs
 unsigned moyenne = ...;
+
 if (moyenne == 0)
-{
   Console.WriteLine("Substract one and it's perfect !");
-}
 else if (moyenne == 10)
-{
   Console.WriteLine("Keep working !");
-}
 else if (moyenne == 20)
   Console.WriteLine("Perfect !");
 else
@@ -411,6 +452,7 @@ else
 
 ```cs
 unsigned moyenne = ...;
+
 switch (moyenne)
 {
   case 0:
@@ -432,53 +474,59 @@ switch (moyenne)
 
 ```cs
 string girl_name = ...;
+
 while (girl_name != "no one")
 {
   slap(girl_name);
-  Console.WriteLine("You are not ready " + name);
+  Console.WriteLine("You are not ready " + girl_name);
   girl_name = answer();
 }
+
 Console.WriteLine("A girl has no name");
 ```
 
 > - How long can we stay in the while ?
-> - `girl_name = "Marie"`
-> - `You are not ready Marie`
-> - `girl_name = "Camille"`
-> - `You are not ready Camille`
-> - `girl_name = "Charlotte"`
-> - `You are not ready Charlotte`
+> - `girl_name = "Marie"`{.cs}
+> - `You are not ready Marie`{.cs}
+> - `girl_name = "Camille"`{.cs}
+> - `You are not ready Camille`{.cs}
+> - `girl_name = "Charlotte"`{.cs}
+> - `You are not ready Charlotte`{.cs}
 
 ## Control structures - while & do while
 
 ```cs
 string girl_name = ...;
+
 while (girl_name != "no one")
 {
   slap(girl_name);
-  Console.WriteLine("You are not ready " + name);
+  Console.WriteLine("You are not ready " + girl_name);
   girl_name = answer();
 }
+
 Console.WriteLine("A girl has no name");
 ```
 
-> - `girl_name = "Jeanne"`
-> - `You are not ready Jeanne`
-> - `girl_name = "Lou"`
-> - `You are not ready Lou`
-> - `girl_name = "no one"`
-> - `A girl has no name`
+> - `girl_name = "Jeanne"`{.cs}
+> - `You are not ready Jeanne`{.cs}
+> - `girl_name = "Lou"`{.cs}
+> - `You are not ready Lou`{.cs}
+> - `girl_name = "no one"`{.cs}
+> - `A girl has no name`{.cs}
 
 ## Control structures - while & do while
 
 ```cs
-Console.WriteLine("Type a number please");
+Console.WriteLine("Type a digit please");
 char res = Console.ReadKey();
+
 while (res < '0' || res > '9')
 {
-  Console.WriteLine("Type a number please");
+  Console.WriteLine("Type a digit please");
   res = Console.ReadKey();
 }
+
 Console.WriteLine("Finaly you got it ...");
 ```
 
@@ -490,11 +538,13 @@ Console.WriteLine("Finaly you got it ...");
 
 ```cs
 char res;
+
 do
 {
-  Console.WriteLine("Type a number please");
+  Console.WriteLine("Type a digit please");
   res = Console.ReadKey();
 } while (res < '0' || res > '9');
+
 Console.WriteLine("Finaly you got it ...");
 ```
 
@@ -505,6 +555,7 @@ Console.WriteLine("Finaly you got it ...");
 ```cs
 string[] names = { "Inaxys", "CueBrick", "Tetra" };
 int i = 0;
+
 while (i < names.Count)
 {
   Console.WriteLine(names[i] + " is in the place !");
@@ -518,6 +569,7 @@ while (i < names.Count)
 
 ```cs
 string[] names = { "Inaxys", "CueBrick", "Tetra" };
+
 for (int i = 0; i < names.Count; ++i)
 {
   Console.WriteLine(names[i] + " is in the place !");
@@ -531,13 +583,14 @@ for (int i = 0; i < names.Count; ++i)
 
 ```cs
 string[] names = { "Inaxys", "CueBrick", "Tetra" };
+
 foreach (string name in names)
 {
   Console.WriteLine(name + " is in the place !");
 }
 ```
 
-> - It's is finally clean !
+> - It's finally clean !
 > - One rule: never modify the loop variable in a foreach !
 
 # Questions ?
