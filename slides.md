@@ -882,20 +882,19 @@ public static main(string[] args)
 ```cs
 public class ACDC {
   public string name;
-  public string tshirt_name;
-  public string intranet_password;
+  public string tshirtName;
+  public string intranetPassword;
 
   public ACDC(string name, string passwd) {
     this.name = name;
-    this.string_name = name;
-    this.intranet_password = passwd;
+    this.intranetPassword = passwd;
   }
 }
 ```
 
-> - We want `name` and `thsirt_name` to be equal at any time
-> - If someone modify `name`, `tshirt_name` will not be updated
-> - We do not want another class to see what's in `intranet_password`
+> - We want `name` and `thsirtName` to be equal at any time
+> - If someone modify `name`, `tshirtName` will not be updated
+> - We do not want another class to see what's in `intranetPassword`
 > - Solution: visibility attributes
 
 ## Visibility attributes
