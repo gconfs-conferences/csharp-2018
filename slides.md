@@ -1000,7 +1000,7 @@ class ASM : Assistant /* Also inherits from Assistant */
 }
 ```
 
-# Advanced C#
+# Advanced C\#
 
 ## Keywords
 
@@ -1264,4 +1264,4 @@ greetings("All");
 // Bye All
 ```
 
-## Questions? 
+## Questions?
