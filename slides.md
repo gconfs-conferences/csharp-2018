@@ -516,7 +516,7 @@ else
 
 ```cs
 int n = ...;
-int abs = (n >= 0)? n : -n;
+int abs = (n >= 0) ? n : -n;
 ```
 
 > - ? is the if
@@ -527,7 +527,7 @@ int abs = (n >= 0)? n : -n;
 
 ```cs
 int n = -42;
-int abs = (n >= 0)? n : -n;
+int abs = (n >= 0) ? n : -n;
 ```
 
 > - What is the value of abs?
@@ -537,7 +537,7 @@ int abs = (n >= 0)? n : -n;
 
 ```cs
 int n = 2020;
-int abs = (n >= 0)? n : -n;
+int abs = (n >= 0) ? n : -n;
 ```
 
 > - What is the value of abs?
