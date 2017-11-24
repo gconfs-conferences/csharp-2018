@@ -94,7 +94,7 @@ public class HelloWorld {
 > - `char nineAlso = 57;`{.cs}
 > - `float goldenRatio = 1.6180f;`{.cs}
 > - `string deadLine = "These violent deadlines"`{.cs}
-                      `"have violent ends";`{.cs}
+                      ` + "have violent ends";`{.cs}
 > - `bool youAreInEpita = true;`{.cs}
 
 > - `float[] floatArray = new float[10];`{.cs}
