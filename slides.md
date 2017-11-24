@@ -1060,13 +1060,14 @@ foreach(Human person in people)
 
 ## Namespace
 
-> - Scopes where a set of related classes is implemented.
-> - Namespaces use visibility. One can declared a class as private (only accessible in the current namespace) or public (accessible from anywhere).
+> - Scopes where a set of related classes are implemented.
+> - Namespaces use visibility. One can declare a class as private (only accessible in the current namespace) or public (accessible from anywhere).
 
 ## Example
 
 ```cs
-Schools.Ionis.Epita.Students.best.ING1.best.ACDC inaxys = new Schools.Ionis.Epita.Students.best.ING1.best.ACDC();
+Schools.Ionis.Epita.Students.best.ING1.best.ACDC inaxys = new
+Schools.Ionis.Epita.Students.best.ING1.best.ACDC();
 
 inaxys.Sings("Best acdc rpz!");
 ```
@@ -1082,7 +1083,7 @@ inaxys.Screams("This is SPARTAAAAAAAAAAAAAAAA");
 
 ## Operator overloading
 
-* you can define opertors between classes (or types in general)
+* you can define operators between classes (or types in general)
 * In other words, you can use `+`, `-`, `*`, `/`, etc.
 
 ## Example
@@ -1116,7 +1117,7 @@ Human baby = daddy + mommy; // metis and brown eyes, genetics duh!
 
 * Manage errors
 * Allows to create custom errors (new classes in fact)
-* `Execption` is a class
+* `Exception` is a class
 
 ## Throw
 
@@ -1140,7 +1141,8 @@ public statuc void Main()
     int t = Convert.toInt32("42");
     // int t = Convert.toInt32("Phorty-twoh");
   } catch (Exception e) {
-    Console.Error.WriteLine("You shall not pass!!:" + e.message);
+    Console.Error.WriteLine("You shall not pass!!:" +
+      e.message);
   }
 }
 
@@ -1191,7 +1193,7 @@ public class Stack<T>
 ## Example
 
 ```cs
-Stack<int> stack = null;
+Stack<int> stack;
 
 for (int i = 0; i < 7; ++i)
   stack = new Stack<int>(i, stack);
@@ -1275,4 +1277,4 @@ greetings("All");
 
 ## Questions?
 
-* Questions? Choses pas claires?
+* Questions?
