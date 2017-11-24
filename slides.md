@@ -129,7 +129,7 @@ bar[1] = 22;
 
 ## Comments
 
-> - What is comments?
+> - What are comments?
 > - Is it eatable?
 
 > - Is it useful?
@@ -157,7 +157,7 @@ int b = 6;
 int c = 0;
 
 // delta is the resolution of a polynomial function of degree
-// two with a, b and c as a coefficient
+// two with a, b and c as coefficient
 int delta = (b * b) - 4 * a * c;
 ```
 
@@ -172,7 +172,7 @@ int b = 6;
 int c = 0;
 
 delta is the resolution of a polynomial function of degree
-two with a, b and c as a coefficient */
+two with a, b and c as coefficient */
 int delta = (b * b) - 4 * a * c;
 ```
 
@@ -343,8 +343,8 @@ string bridge()
 }
 ```
 
-> - `string str = bridge();`{.cs}
-> - `// str = "you fools!"`{.cs}
+> - `string end = bridge();`{.cs}
+> - `// end = "you fools!"`{.cs}
 
 ## Functions
 
@@ -355,8 +355,8 @@ void quoteMe(string end)
 }
 ```
 
-> - `// str = "you fools!"`{.cs}
-> - `str = quoteMe(str);`{.cs}
+> - `// end = "you fools!"`{.cs}
+> - `end = quoteMe(str);`{.cs}
 > - What...?
 
 > - Impossible because the return type of quoteMe is void, so we can't retrieve anything from the function!
@@ -545,8 +545,7 @@ int abs = (n >= 0) ? n : -n;
 > - What is the value of abs?
 > - 2020
 
-> - If n is negative abs is the absolute value of n else it's n
-> - In all case, abs is |n|
+> - In all cases, abs is |n|
 
 ## Control structures - switch
 
@@ -590,42 +589,42 @@ switch (moyenne)
 ## Control structures - while & do while
 
 ```cs
-string girl_name = ...;
+string girlName = ...;
 
-while (girl_name != "no one")
+while (girlName != "no one")
 {
-  slap(girl_name);
-  Console.WriteLine("You are not ready " + girl_name);
-  girl_name = answer();
+  slap(girlName);
+  Console.WriteLine("You are not ready " + girlName);
+  girlName = answer();
 }
 
 Console.WriteLine("A girl has no name");
 ```
 
 > - How long can we stay in the while?
-> - `girl_name = "Marie"`{.cs}
+> - `girlName = "Marie"`{.cs}
 > - `You are not ready Marie`{.cs}
-> - `girl_name = "Camille"`{.cs}
+> - `girlName = "Camille"`{.cs}
 > - `You are not ready Camille`{.cs}
 
 ## Control structures - while & do while
 
 ```cs
-string girl_name = ...;
+string girlName = ...;
 
-while (girl_name != "no one")
+while (girlName != "no one")
 {
   slap(girl_name);
-  Console.WriteLine("You are not ready " + girl_name);
-  girl_name = answer();
+  Console.WriteLine("You are not ready " + girlName);
+  girlName = answer();
 }
 
 Console.WriteLine("A girl has no name");
 ```
 
-> - `girl_name = "Jeanne"`{.cs}
+> - `girlName = "Jeanne"`{.cs}
 > - `You are not ready Jeanne`{.cs}
-> - `girl_name = "no one"`{.cs}
+> - `girlName = "no one"`{.cs}
 > - `A girl has no name`{.cs}
 
 ## Control structures - while & do while
@@ -689,7 +688,7 @@ for (int i = 0; i < names.Count; ++i)
 }
 ```
 
-> - It's quit better but ...
+> - It's quite better but ...
 > - We still have 3 i in the same line plus one in the loop
 > - Can we do better?
 
