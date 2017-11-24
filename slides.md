@@ -896,8 +896,8 @@ public class ACDC {
 }
 ```
 
-> - We want `name` and `thsirtName` to be equal at any time
-> - If someone modify `name`, `tshirtName` will not be updated
+> - We want `name` and `tshirtName` to be equal at any time
+> - If someone modifies `name`, `tshirtName` will not be updated
 > - We do not want another class to see what's in `intranetPassword`
 > - Solution: visibility attributes
 
@@ -932,8 +932,8 @@ public class ACDC {
 
 ## The Problem
 
-> - Suppose we want to write a class ASM
-> - It has to share properties with the class ACDC
+> - Suppose we want to write an ASM class
+> - It has to share properties with the ACDC class
 > - It also has to implement its own new properties
 > - Repetitive code...
 > - That's why inheritance exists
@@ -948,7 +948,7 @@ public class ACDC {
 
 ## Visual example
 
-![ACDC and ASM shared the attributes of Assistant](img/inheritance.png)
+![ACDC and ASM shares the attributes of Assistant](img/inheritance.png)
 
 ## In Code
 
