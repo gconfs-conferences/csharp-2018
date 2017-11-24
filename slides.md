@@ -707,6 +707,8 @@ foreach (string name in names)
 
 ## Questions?
 
+* Questions?
+
 # Object Oriented Programming
 
 ## What is OOP?
