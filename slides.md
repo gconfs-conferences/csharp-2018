@@ -439,6 +439,8 @@ Console.WriteLine("Awesomeness: " + awesomeness);
 
 ## Questions?
 
+* Questions?
+
 # Imperative programming
 
 ## What is imperative?
@@ -1272,3 +1274,5 @@ greetings("All");
 ```
 
 ## Questions?
+
+* Questions
