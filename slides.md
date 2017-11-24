@@ -799,13 +799,6 @@ class ACDC
 ```cs
 class ACDC
 {
-  public ACDC()
-  {
-    this.name = "Cyril";
-    this.height = 180;
-    this.age = 2;
-  }
-
   public ACDC(string name, int height, int age)
   {
     this.name = name;
@@ -820,7 +813,7 @@ class ACDC
 ```cs
 public static void Main(string[] args)
 {
-  ACDC inaxys = new ACDC();
+  ACDC inaxys = new ACDC("Inaxys", 180, 2);
   ACDC cuebrick = new ACDC("Cuebrick", 280, 20);
 
   inaxys.GetAge(); // returns 2
@@ -869,7 +862,7 @@ public static void Main(string[] args)
 ## Example
 
 ```cs
-static class MY_MATH
+static class QuickMath
 {
   // every method is static
   static int Power(int a, int b);
@@ -878,7 +871,7 @@ static class MY_MATH
 
 public static main(string[] args)
 {
-  MY_MATH.Power(2, 2); // = 4
+  QuickMath.Power(2, 2); // = 4
 }
 ```
 
@@ -888,21 +881,21 @@ public static main(string[] args)
 
 ```cs
 public class ACDC {
-  public string _name;
-  public string _tshirt_name;
-  public string _intranet_password;
+  public string name;
+  public string tshirt_name;
+  public string intranet_password;
 
   public ACDC(string name, string passwd) {
-    this._name = name;
-    this._string_name = name;
-    this._intranet_password = passwd;
+    this.name = name;
+    this.string_name = name;
+    this.intranet_password = passwd;
   }
 }
 ```
 
-> - We want `_name` and `_thsirt_name` to be equal at any time
-> - If someone modify `_name`, `_tshirt_name` will not be updated
-> - We do not want another class to see what's in `_intranet_password`
+> - We want `name` and `thsirt_name` to be equal at any time
+> - If someone modify `name`, `tshirt_name` will not be updated
+> - We do not want another class to see what's in `intranet_password`
 > - Solution: visibility attributes
 
 ## Visibility attributes
