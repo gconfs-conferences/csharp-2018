@@ -229,111 +229,6 @@ int delta = (b * b) - 4 * a * c;
 
 > - `!`{.cs}
 
-## Logic everywhere
-
-> - Numbers are represented by bits in the computer
-
-> - Indeed true and false are like 1 and 0
-
-> - And if we want to do operation on these bits?
-
-## Bitwise operators - Not
-
-> - `byte i = 194;`{.cs}
-> - `i = ~i;`{.cs}
-> - `// i = 61`{.cs}
-
-![Not Table](img/not.png){ width=50% height=25% }
-
-> - `~11000010`
-> - `---------`
-> - `_00111101`
-
-## Bitwise operators - And
-
-> - `byte i = 194;`{.cs}
-> - `i = i & 71;`{.cs}
-> - `// i = 66`{.cs}
-
-![And Table](img/and.png){ width=45% height=20% }
-
-> - `_11000010`
-> - `&01000111`
-> - `---------`
-> - `_01000010`
-
-## Bitwise operators - Or
-
-> - `byte i = 194;`{.cs}
-> - `i = i | 71;`{.cs}
-> - `// i = 199`{.cs}
-
-![Or Table](img/or.png){ width=45% height=20% }
-
-> - `_110000010`
-> - `|010000111`
-> - `----------`
-> - `_110000111`
-
-## Bitwise operators - Xor
-
-> - `byte i = 194;`{.cs}
-> - `i = i ^ 71;`{.cs}
-> - `// i = 133`{.cs}
-
-![Xor Table](img/xor.png){ width=45% height=20% }
-
-> - `_11000010`
-> - `^01000111`
-> - `---------`
-> - `_10000101`
-
-## Bitwise operators - Shift
-
-> - `byte power = 3;`{.cs}
-> - `00000011`{.cs}
-> - `// power = 3`{.cs}
-
-> - `power = power << 1;`{.cs}
-> - `00000011`{.cs}
-> - `-----<--`{.cs}
-> - `00000110`{.cs}
-> - `// power = 6`{.cs}
-
-## Bitwise operators - Shift
-
-> - `power <<= 1;`{.cs}
-> - `00000110`{.cs}
-> - `-----<--`{.cs}
-> - `00001100`{.cs}
-> - `// power = 12`{.cs}
-
-> - What do you notice on power?
-> - Left shift multiply the number by n shift
-
-## Bitwise operators - Shift
-
-> - `byte power = 12;`{.cs}
-> - `// power = 12`{.cs}
-> - `00001100`{.cs}
-
-> - `power >>= 3;`{.cs}
-> - `power <<= 2;`{.cs}
-
-> - What is the value of power?
-
-## Bitwise operators - Shift
-
-> - `byte power = 12;`{.cs}
-
-> - `00001100`{.cs}
-> - `---->>>-`{.cs}
-> - `00000001`{.cs}
-> - `------<<`{.cs}
-> - `00000100`{.cs}
-
-> - `// power = 4`{.cs}
-
 ## Functions
 
 ```cs
@@ -439,7 +334,7 @@ Console.WriteLine("Awesomeness: " + awesomeness);
 
 ## Questions?
 
-* Questions? Choses pas claires?
+* Questions? Remarques? Choses pas claires?
 
 # Imperative programming
 
@@ -708,7 +603,7 @@ foreach (string name in names)
 
 ## Questions?
 
-* Questions? Choses pas claires?
+* Questions? Remarques? Choses pas claires?
 
 # Object Oriented Programming
 
@@ -1009,6 +904,111 @@ class ASM : Assistant /* Also inherits from Assistant */
 ```
 
 # Advanced C\#
+
+## Logic everywhere
+
+> - Numbers are represented by bits in the computer
+
+> - Indeed true and false are like 1 and 0
+
+> - And if we want to do operation on these bits?
+
+## Bitwise operators - Not
+
+> - `byte i = 194;`{.cs}
+> - `i = ~i;`{.cs}
+> - `// i = 61`{.cs}
+
+![Not Table](img/not.png){ width=50% height=25% }
+
+> - `~11000010`
+> - `---------`
+> - `_00111101`
+
+## Bitwise operators - And
+
+> - `byte i = 194;`{.cs}
+> - `i = i & 71;`{.cs}
+> - `// i = 66`{.cs}
+
+![And Table](img/and.png){ width=45% height=20% }
+
+> - `_11000010`
+> - `&01000111`
+> - `---------`
+> - `_01000010`
+
+## Bitwise operators - Or
+
+> - `byte i = 194;`{.cs}
+> - `i = i | 71;`{.cs}
+> - `// i = 199`{.cs}
+
+![Or Table](img/or.png){ width=45% height=20% }
+
+> - `_110000010`
+> - `|010000111`
+> - `----------`
+> - `_110000111`
+
+## Bitwise operators - Xor
+
+> - `byte i = 194;`{.cs}
+> - `i = i ^ 71;`{.cs}
+> - `// i = 133`{.cs}
+
+![Xor Table](img/xor.png){ width=45% height=20% }
+
+> - `_11000010`
+> - `^01000111`
+> - `---------`
+> - `_10000101`
+
+## Bitwise operators - Shift
+
+> - `byte power = 3;`{.cs}
+> - `00000011`{.cs}
+> - `// power = 3`{.cs}
+
+> - `power = power << 1;`{.cs}
+> - `00000011`{.cs}
+> - `-----<--`{.cs}
+> - `00000110`{.cs}
+> - `// power = 6`{.cs}
+
+## Bitwise operators - Shift
+
+> - `power <<= 1;`{.cs}
+> - `00000110`{.cs}
+> - `-----<--`{.cs}
+> - `00001100`{.cs}
+> - `// power = 12`{.cs}
+
+> - What do you notice on power?
+> - Left shift multiply the number by n shift
+
+## Bitwise operators - Shift
+
+> - `byte power = 12;`{.cs}
+> - `// power = 12`{.cs}
+> - `00001100`{.cs}
+
+> - `power >>= 3;`{.cs}
+> - `power <<= 2;`{.cs}
+
+> - What is the value of power?
+
+## Bitwise operators - Shift
+
+> - `byte power = 12;`{.cs}
+
+> - `00001100`{.cs}
+> - `---->>>-`{.cs}
+> - `00000001`{.cs}
+> - `------<<`{.cs}
+> - `00000100`{.cs}
+
+> - `// power = 4`{.cs}
 
 ## Keywords
 
