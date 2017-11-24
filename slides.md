@@ -439,7 +439,7 @@ Console.WriteLine("Awesomeness: " + awesomeness);
 
 ## Questions?
 
-* Questions?
+* Questions? Choses pas claires?
 
 # Imperative programming
 
@@ -709,7 +709,7 @@ foreach (string name in names)
 
 ## Questions?
 
-* Questions?
+* Questions? Choses pas claires?
 
 # Object Oriented Programming
 
@@ -1275,4 +1275,4 @@ greetings("All");
 
 ## Questions?
 
-* Questions
+* Questions? Choses pas claires?
