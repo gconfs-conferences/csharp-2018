@@ -915,19 +915,19 @@ public class ACDC {
 
 ```cs
 public class ACDC {
-  private string _name;
-  private string _tshirt_name;
-  private string _intranet_password;
+  private string name;
+  private string tshirtName;
+  private string intranetPassword;
 
   public ACDC(string name, string passwd) {
-    this._name = name;
-    this._string_name = name;
-    this._intranet_password = passwd;
+    this.name = name;
+    this.name = name;
+    this.intranetPassword = passwd;
   }
 
-  public void AskKindlyToChangeName(string new_name) {
-    this._name = new_name;
-    this._tshirt_name = new_name;
+  public void AskKindlyToChangeName(string newName) {
+    this.name = newName;
+    this.tshirtName = newName;
   }
 }
 ```
@@ -960,13 +960,13 @@ Generic Assistant class
 ```cs
 class Assistant
 {
-  private string _name;
-  private Color  _tshirt_color;
+  private string name;
+  private Color  tshirtColor;
 
-  public Assistant(string name, Color tshirt_color)
+  public Assistant(string name, Color tshirtColor)
   {
-    this._name = name;
-    this._tshirt_color = tshirt_color;
+    this.name = name;
+    this.tshirtColor = tshirtColor;
   }
 }
 ```
@@ -977,13 +977,13 @@ ACDC Class
 ```cs
 class ACDC : Assistant // Inherits from Assistant
 {
-  private int _caml_skills;
+  private int camlSkills;
 
   public ACDC(string name, int skills):
          base(name, Color.Brown) // Assistant constructor
   {
-    /* No need to initialize _nickname and _tshirt_color */
-    this._caml_skills = skills;
+    /* No need to initialize name and tshirtColor */
+    this.camlSkills = skills;
   }
 
   public void TeachCAML() {
@@ -998,13 +998,13 @@ ASM Class
 ```cs
 class ASM : Assistant /* Also inherits from Assistant */
 {
-  private bool _emacs_lover;
+  private bool emacsLover;
 
   public ASM(string name, bool emacs):
          base(name, Color.Grey) // Assistant constructor
   {
-    /* No need to initialize _nickname and _tshirt_color */
-    this._emacs_lover = emacs;
+    /* No need to initialize name and tshirtColor */
+    this.emacsLover = emacs;
   }
 
   public void TeachC99() {
