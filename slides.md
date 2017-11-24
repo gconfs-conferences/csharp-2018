@@ -73,7 +73,7 @@ public class HelloWorld {
 > - `theAnswer = 42;`{.cs}
 > - Initialized
 
-> - A little too long ?
+> - A little too long?
 
 ## Types initialization
 
@@ -100,20 +100,20 @@ public class HelloWorld {
 > - `float[] floatArray = new float[10];`{.cs}
 > - `string[] names = { "Inaxys", "CueBrick", "Tetra" };`{.cs}
 
-## Warning !
+## Warning!
 
 ```cs
 int foo = 6;
 int bar = foo;
 bar = 25
 ```
-> - What is the value of foo ?
+> - What is the value of foo?
 > - 6
 
-> - What is the value of bar ?
+> - What is the value of bar?
 > - 25
 
-## Warning !
+## Warning!
 
 ```cs
 int[] foo = { 20, 20 };
@@ -121,19 +121,19 @@ int[] bar = foo;
 bar[1] = 22;
 ```
 
-> - What is the value of bar ?
+> - What is the value of bar?
 > - { 20, 22 }
 
-> - What is the value of foo ?
+> - What is the value of foo?
 > - { 20, 22 }
 
 ## Comments
 
-> - What is comments ?
-> - Is it eatable ?
+> - What is comments?
+> - Is it eatable?
 
-> - Is it useful ?
-> - Of course, it's to explicit your code !
+> - Is it useful?
+> - Of course, it's to explicit your code!
 
 ## Comments - Exemples
 
@@ -142,12 +142,12 @@ int a = 1;
 int b = 6;
 int c = 0;
 
-// Jung ner lbh qbvat ? Fgbc gbhpuvat zl pbqr !
+// Jung ner lbh qbvat? Fgbc gbhpuvat zl pbqr!
 int delta = (b * b) - 4 * a * c;
 ```
 
-> - Is the syntax correct ?
-> - The compiler doesn't check comments !
+> - Is the syntax correct?
+> - The compiler doesn't check comments!
 
 ## Comments - Exemples
 
@@ -176,7 +176,7 @@ two with a, b and c as a coefficient */
 int delta = (b * b) - 4 * a * c;
 ```
 
-> - There is a problem ...
+> - There is a problem...
 > - The comments are not compiled so the code will not compile
 
 ## Operators
@@ -187,7 +187,7 @@ int delta = (b * b) - 4 * a * c;
 > - `theAnswer = theAnswer + 2;`{.cs}
 > - `// theAnswer = 6;`{.cs}
 
-> - How to simplify this ?
+> - How to simplify this?
 > - `theAnswer += 2;`{.cs}
 > - `// theAnswer = 8;`{.cs}
 
@@ -204,7 +204,7 @@ int delta = (b * b) - 4 * a * c;
 > - `int theAnswer = 6;`{.cs}
 > - `theAnswer *= 2 + 10 % 7 + 1 * 2;`{.cs}
 
-> - What is the value of theAnswer ?
+> - What is the value of theAnswer?
 > - theAnswer = 42
 
 
@@ -220,12 +220,12 @@ int delta = (b * b) - 4 * a * c;
 
 ## Logical operators
 
-> - How to combine multiple boolean ?
+> - How to combine multiple boolean?
 
 > - `&&`{.cs}
 > - `||`{.cs}
 
-> - And if we want to negate a boolean ?
+> - And if we want to negate a boolean?
 
 > - `!`{.cs}
 
@@ -235,7 +235,7 @@ int delta = (b * b) - 4 * a * c;
 
 > - Indeed true and false are like 1 and 0
 
-> - And if we want to do operation on these bits ?
+> - And if we want to do operation on these bits?
 
 ## Bitwise operators - Not
 
@@ -247,7 +247,7 @@ int delta = (b * b) - 4 * a * c;
 
 > - `~11000010`
 > - `---------`
-> - `00111101`
+> - `_00111101`
 
 ## Bitwise operators - And
 
@@ -257,10 +257,10 @@ int delta = (b * b) - 4 * a * c;
 
 ![And Table](img/and.png){ width=45% height=20% }
 
-> - `11000010`
+> - `_11000010`
 > - `&01000111`
 > - `---------`
-> - `01000010`
+> - `_01000010`
 
 ## Bitwise operators - Or
 
@@ -270,10 +270,10 @@ int delta = (b * b) - 4 * a * c;
 
 ![Or Table](img/or.png){ width=45% height=20% }
 
-> - `110000010`
+> - `_110000010`
 > - `|010000111`
 > - `----------`
-> - `110000111`
+> - `_110000111`
 
 ## Bitwise operators - Xor
 
@@ -283,10 +283,10 @@ int delta = (b * b) - 4 * a * c;
 
 ![Xor Table](img/xor.png){ width=45% height=20% }
 
-> - `11000010`
+> - `_11000010`
 > - `^01000111`
 > - `---------`
-> - `10000101`
+> - `_10000101`
 
 ## Bitwise operators - Shift
 
@@ -308,7 +308,7 @@ int delta = (b * b) - 4 * a * c;
 > - `00001100`{.cs}
 > - `// power = 12`{.cs}
 
-> - What do you notice on power ?
+> - What do you notice on power?
 > - Left shift multiply the number by n shift
 
 ## Bitwise operators - Shift
@@ -320,7 +320,7 @@ int delta = (b * b) - 4 * a * c;
 > - `power >>= 3;`{.cs}
 > - `power <<= 2;`{.cs}
 
-> - What is the value of power ?
+> - What is the value of power?
 
 ## Bitwise operators - Shift
 
@@ -339,12 +339,12 @@ int delta = (b * b) - 4 * a * c;
 ```cs
 string bridge()
 {
-  return "you fools !";
+  return "you fools!";
 }
 ```
 
 > - `string str = bridge();`{.cs}
-> - `// str = "you fools !"`{.cs}
+> - `// str = "you fools!"`{.cs}
 
 ## Functions
 
@@ -355,11 +355,24 @@ void quoteMe(string end)
 }
 ```
 
-> - `// str = "you fools !"`{.cs}
+> - `// str = "you fools!"`{.cs}
 > - `str = quoteMe(str);`{.cs}
-> - What ...?
+> - What...?
 
-> - Impossible because the return type of quoteMe is void, so we can't retrieve anything from the function !
+> - Impossible because the return type of quoteMe is void, so we can't retrieve anything from the function!
+
+## Functions
+
+```cs
+void quoteMe(string end)
+{
+  Console.WriteLine("Fly, " + end);
+}
+```
+
+> - `// str = "you fools!"`{.cs}
+> - `quoteMe(str);`{.cs}
+> - Fly, you fools!
 
 ## Arguments passed by reference
 
@@ -373,7 +386,7 @@ void setValue(int x)
 > - `int val = 10;`{.cs}
 > - `setValue(val);`{.cs}
 
-> - What is the value of val ?
+> - What is the value of val?
 > - val = 10
 
 ## Arguments passed by reference
@@ -388,7 +401,7 @@ void setValue(ref int x)
 > - `int val = 10;`{.cs}
 > - `setValue(ref val);`{.cs}
 
-> - What is the value of val ?
+> - What is the value of val?
 > - val = 0
 
 ## Visibility
@@ -404,8 +417,8 @@ void awesome()
 Console.WriteLine("Awesomeness: " + awesomeness);
 ```
 
-> - What will be written in the console ?
-> - It won't even compile !
+> - What will be written in the console?
+> - It won't even compile!
 
 ## Visibility
 
@@ -424,7 +437,7 @@ Console.WriteLine("Awesomeness: " + awesomeness);
 > - Nested with brackets `{ }`
 > - Everything you create within a scope is not visible outside
 
-## Questions ?
+## Questions?
 
 # Imperative programming
 
@@ -441,9 +454,9 @@ Console.WriteLine("Awesomeness: " + awesomeness);
 int promo = ...;
 bool acdcu = ...;
 
-if (promo == 2020 && acdcu)
+if (promo == 2020 && acdcu == 1)
 {
-  Console.WriteLine("Hi ! I'm Ferdinand !");
+  Console.WriteLine("Hi! I'm Ferdinand!");
 }
 ```
 
@@ -453,13 +466,13 @@ if (promo == 2020 && acdcu)
 int promo = ...;
 bool acdcu = ...;
 
-if (promo == 2020 && acdcu)
+if (promo == 2020 && acdcu == 1)
 {
-  Console.WriteLine("Hi ! I'm Ferdinand !");
+  Console.WriteLine("Hi! I'm Ferdinand!");
 }
-else if (promo == 2020 && !acdcu)
+else if (promo == 2020 && acdcu != 1)
 {
-  Console.WriteLine("Hello ! I'm your ACDC !");
+  Console.WriteLine("Hello! I'm your ACDC!");
 }
 ```
 
@@ -469,13 +482,13 @@ else if (promo == 2020 && !acdcu)
 int promo = ...;
 bool acdcu = ...;
 
-if (promo == 2020 && acdcu)
+if (promo == 2020 && acdcu == 1)
 {
-  Console.WriteLine("Hi ! I'm Ferdinand !");
+  Console.WriteLine("Hi! I'm Ferdinand!");
 }
 else if (promo == 2020)
 {
-  Console.WriteLine("Hello ! I'm your ACDC !");
+  Console.WriteLine("Hello! I'm your ACDC!");
 }
 ```
 
@@ -485,17 +498,17 @@ else if (promo == 2020)
 int promo = ...;
 bool acdcu = ...;
 
-if (promo == 2020 && acdcu)
+if (promo == 2020 && acdcu == 1)
 {
-  Console.WriteLine("Hi ! I'm Ferdinand !");
+  Console.WriteLine("Hi! I'm Ferdinand!");
 }
 else if (promo == 2020)
 {
-  Console.WriteLine("Hello ! I'm your ACDC !");
+  Console.WriteLine("Hello! I'm your ACDC!");
 }
 else
 {
-  Console.WriteLine("I'm still too young / old :'( !");
+  Console.WriteLine("I'm still too young / old :'(!");
 }
 ```
 
@@ -503,7 +516,7 @@ else
 
 ```cs
 int n = ...;
-int abs = (n >= 0) ? n : -n;
+int abs = (n >= 0)? n : -n;
 ```
 
 > - ? is the if
@@ -514,20 +527,20 @@ int abs = (n >= 0) ? n : -n;
 
 ```cs
 int n = -42;
-int abs = (n >= 0) ? n : -n;
+int abs = (n >= 0)? n : -n;
 ```
 
-> - What is the value of abs ?
+> - What is the value of abs?
 > - 42
 
 ## Control structures - ternary
 
 ```cs
 int n = 2020;
-int abs = (n >= 0) ? n : -n;
+int abs = (n >= 0)? n : -n;
 ```
 
-> - What is the value of abs ?
+> - What is the value of abs?
 > - 2020
 
 > - If n is negative abs is the absolute value of n else it's n
@@ -539,17 +552,17 @@ int abs = (n >= 0) ? n : -n;
 unsigned moyenne = ...;
 
 if (moyenne == 0)
-  Console.WriteLine("Substract one and it's perfect !");
+  Console.WriteLine("Substract one and it's perfect!");
 else if (moyenne == 10)
-  Console.WriteLine("Keep working !");
+  Console.WriteLine("Keep working!");
 else if (moyenne == 20)
-  Console.WriteLine("Perfect !");
+  Console.WriteLine("Perfect!");
 else
-  Console.WriteLine("Wut ?");
+  Console.WriteLine("Wut?");
 ```
 
-> - How think it's ugly ?
-> - It is ...
+> - Who does think it's ugly?
+> - It is...
 
 ## Control structures - switch
 
@@ -558,16 +571,16 @@ unsigned moyenne = ...;
 switch (moyenne)
 {
   case 0:
-    Console.WriteLine("Substract one and it's perfect !");
+    Console.WriteLine("Substract one and it's perfect!");
     break;
   case 10:
-    Console.WriteLine("Keep working !");
+    Console.WriteLine("Keep working!");
     break;
   case 20:
-    Console.WriteLine("Perfect !");
+    Console.WriteLine("Perfect!");
     break;
   default:
-    Console.WriteLine("Wut ?");
+    Console.WriteLine("Wut?");
     break;
 }
 ```
@@ -587,7 +600,7 @@ while (girl_name != "no one")
 Console.WriteLine("A girl has no name");
 ```
 
-> - How long can we stay in the while ?
+> - How long can we stay in the while?
 > - `girl_name = "Marie"`{.cs}
 > - `You are not ready Marie`{.cs}
 > - `girl_name = "Camille"`{.cs}
@@ -628,14 +641,14 @@ while (res < '0' || res > '9')
 Console.WriteLine("Finaly you got it ...");
 ```
 
-> - What is ugly here ?
+> - What is ugly here?
 > - The Console.WriteLine and the Console.ReadKey are typed twice.
-> - Can we do something ?
+> - Can we do something?
 
 ## Control structures - while & do while
 
 ```cs
-char res;
+char res = '';
 
 do
 {
@@ -643,7 +656,7 @@ do
   res = Console.ReadKey();
 } while (res < '0' || res > '9');
 
-Console.WriteLine("Finaly you got it ...");
+Console.WriteLine("Finaly you got it...");
 ```
 
 > - It makes more sense like this ...
@@ -656,12 +669,12 @@ int i = 0;
 
 while (i < names.Count)
 {
-  Console.WriteLine(names[i] + " is in the place !");
+  Console.WriteLine(names[i] + " is in the place!");
   ++i;
 }
 ```
 
-> - The integer i is in 4 different places, can we reduce ?
+> - The integer i is in 4 different places, can we reduce?
 
 ## Control structures - for
 
@@ -670,13 +683,13 @@ string[] names = { "Inaxys", "CueBrick", "Tetra" };
 
 for (int i = 0; i < names.Count; ++i)
 {
-  Console.WriteLine(names[i] + " is in the place !");
+  Console.WriteLine(names[i] + " is in the place!");
 }
 ```
 
 > - It's quit better but ...
 > - We still have 3 i in the same line plus one in the loop
-> - Can we do better ?
+> - Can we do better?
 
 ## Control structures - foreach
 
@@ -685,14 +698,14 @@ string[] names = { "Inaxys", "CueBrick", "Tetra" };
 
 foreach (string name in names)
 {
-  Console.WriteLine(name + " is in the place !");
+  Console.WriteLine(name + " is in the place!");
 }
 ```
 
-> - It's finally clean !
-> - One rule: never modify the loop variable in a foreach !
+> - It's finally clean!
+> - One rule: never modify the loop variable in a foreach!
 
-## Questions ?
+## Questions?
 
 # Object Oriented Programming
 
