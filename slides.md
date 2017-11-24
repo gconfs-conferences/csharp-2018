@@ -456,7 +456,7 @@ Console.WriteLine("Awesomeness: " + awesomeness);
 int promo = ...;
 bool acdcu = ...;
 
-if (promo == 2020 && acdcu == true)
+if (promo == 2020 && acdcu)
 {
   Console.WriteLine("Hi! I'm Ferdinand!");
 }
@@ -468,11 +468,11 @@ if (promo == 2020 && acdcu == true)
 int promo = ...;
 bool acdcu = ...;
 
-if (promo == 2020 && acdcu == true)
+if (promo == 2020 && acdcu)
 {
   Console.WriteLine("Hi! I'm Ferdinand!");
 }
-else if (promo == 2020 && acdcu != true)
+else if (promo == 2020 && !acdcu)
 {
   Console.WriteLine("Hello! I'm your ACDC!");
 }
@@ -484,7 +484,7 @@ else if (promo == 2020 && acdcu != true)
 int promo = ...;
 bool acdcu = ...;
 
-if (promo == 2020 && acdcu == true)
+if (promo == 2020 && acdcu)
 {
   Console.WriteLine("Hi! I'm Ferdinand!");
 }
@@ -500,7 +500,7 @@ else if (promo == 2020)
 int promo = ...;
 bool acdcu = ...;
 
-if (promo == 2020 && acdcu == true)
+if (promo == 2020 && acdcu)
 {
   Console.WriteLine("Hi! I'm Ferdinand!");
 }
