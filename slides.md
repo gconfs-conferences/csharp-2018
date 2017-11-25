@@ -105,7 +105,7 @@ public class HelloWorld {
 ```cs
 int foo = 6;
 int bar = foo;
-bar = 25
+bar = 25;
 ```
 > - What is the value of foo?
 > - 6
@@ -251,7 +251,7 @@ void quoteMe(string end)
 ```
 
 > - `// end = "you fools!"`{.cs}
-> - `end = quoteMe(str);`{.cs}
+> - `end = quoteMe(end);`{.cs}
 > - What...?
 
 > - Impossible because the return type of quoteMe is void, so we can't retrieve anything from the function!
@@ -265,8 +265,8 @@ void quoteMe(string end)
 }
 ```
 
-> - `// str = "you fools!"`{.cs}
-> - `quoteMe(str);`{.cs}
+> - `// end = "you fools!"`{.cs}
+> - `quoteMe(end);`{.cs}
 > - Fly, you fools!
 
 ## Arguments passed by reference
