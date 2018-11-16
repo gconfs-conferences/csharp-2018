@@ -82,7 +82,7 @@ public class HelloWorld {
 > - `bool youAreInEpita = true;`{.cs}
 
 > - `float[] floatArray = new float[10];`{.cs}
-> - `string[] names = { "Inaxys", "CueBrick", "Tetra" };`{.cs}
+> - `string[] names = { "LordPatate", "Fuizziy", "Nicolas" };`{.cs}
 
 ## Warning!
 
@@ -344,7 +344,7 @@ int promo = ...;
 bool acdcu = ...;
 
 Console.WriteLine("Hello!");
-if (promo == 2020 && acdcu)
+if (promo == 2021 && acdcu)
 {
   Console.WriteLine("Hi! I'm Ferdinand!");
 }
@@ -358,11 +358,11 @@ int promo = ...;
 bool acdcu = ...;
 
 Console.WriteLine("Hello!");
-if (promo == 2020 && acdcu)
+if (promo == 2021 && acdcu)
 {
   Console.WriteLine("Hi! I'm Ferdinand!");
 }
-else if (promo == 2020 && !acdcu)
+else if (promo == 2021 && !acdcu)
 {
   Console.WriteLine("Hello! I'm your ACDC!");
 }
@@ -376,11 +376,11 @@ int promo = ...;
 bool acdcu = ...;
 
 Console.WriteLine("Hello!");
-if (promo == 2020 && acdcu)
+if (promo == 2021 && acdcu)
 {
   Console.WriteLine("Hi! I'm Ferdinand!");
 }
-else if (promo == 2020)
+else if (promo == 2021)
 {
   Console.WriteLine("Hello! I'm your ACDC!");
 }
@@ -394,11 +394,11 @@ int promo = ...;
 bool acdcu = ...;
 
 Console.WriteLine("Hello!");
-if (promo == 2020 && acdcu)
+if (promo == 2021 && acdcu)
 {
   Console.WriteLine("Hi! I'm Ferdinand!");
 }
-else if (promo == 2020)
+else if (promo == 2021)
 {
   Console.WriteLine("Hello! I'm your ACDC!");
 }
@@ -488,7 +488,7 @@ Console.WriteLine("Finaly you got it...");
 ## Control structures - while & do while
 
 ```cs
-string[] names = { "Inaxys", "CueBrick", "Tetra" };
+string[] names = { "LordPatate", "Fuizziy", "Nicolas" };
 int i = 0;
 
 while (i < names.Count)
@@ -503,7 +503,7 @@ while (i < names.Count)
 ## Control structures - for
 
 ```cs
-string[] names = { "Inaxys", "CueBrick", "Tetra" };
+string[] names = { "LordPatate", "Fuizziy", "Nicolas" };
 
 for (int i = 0; i < names.Count; ++i)
 {
@@ -518,7 +518,7 @@ for (int i = 0; i < names.Count; ++i)
 ## Control structures - foreach
 
 ```cs
-string[] names = { "Inaxys", "CueBrick", "Tetra" };
+string[] names = { "LordPatate", "Fuizziy", "Nicolas" };
 
 foreach (string name in names)
 {
@@ -639,11 +639,11 @@ class ACDC
 ```cs
 public static void Main(string[] args)
 {
-  ACDC inaxys = new ACDC("Inaxys", 180, 2);
-  ACDC cuebrick = new ACDC("Cuebrick", 280, 20);
+  ACDC lordPatate = new ACDC("LordPatate", 180, 2);
+  ACDC fuizziy = new ACDC("Fuizziy", 280, 20);
 
-  inaxys.GetAge(); // returns 2
-  cuebrick.GetAge(); // return 20
+  lordPatate.GetAge(); // returns 2
+  fuizziy.GetAge(); // return 20
 }
 ```
 
@@ -857,12 +857,12 @@ int abs = (n >= 0) ? n : -n;
 ## Control structures - ternary
 
 ```cs
-int n = 2020;
+int n = 2021;
 int abs = (n >= 0) ? n : -n;
 ```
 
 > - What is the value of abs?
-> - 2020
+> - 2021
 
 > - In all cases, abs is |n|
 
@@ -1030,13 +1030,13 @@ var acdc = new ACDC();
 ## var and null
 
 ```cs
-var tetra = new ACDC();
-tetra = null;
+var nicolas = new ACDC();
+nicolas = null;
 
-ACDC tetra = new ACDC();
-tetra = null;
+ACDC nicolas = new ACDC();
+nicolas = null;
 
-var tetra = null; // compilation failed
+var nicolas = null; // compilation failed
 ```
 
 ## typeof
@@ -1068,10 +1068,10 @@ foreach(Human person in people)
 ## Example
 
 ```cs
-Schools.Ionis.Epita.Students.best.ING1.best.ACDC inaxys = new
+Schools.Ionis.Epita.Students.best.ING1.best.ACDC lordPatate = new
 Schools.Ionis.Epita.Students.best.ING1.best.ACDC();
 
-inaxys.Sings("Best acdc rpz!");
+lordPatate.Sings("Best acdc rpz!");
 ```
 
 ## Exampe with namespace
@@ -1079,8 +1079,8 @@ inaxys.Sings("Best acdc rpz!");
 ```cs
 using Schools.Ionis.Epita.Students.best.ING1.best.ACDC;
 
-ACDC inaxys = new ACDC();
-inaxys.Screams("This is SPARTAAAAAAAAAAAAAAAA");
+ACDC lordPatate = new ACDC();
+lordPatate.Screams("This is SPARTAAAAAAAAAAAAAAAA");
 ```
 
 ## Operator overloading
@@ -1213,7 +1213,7 @@ Stack<ACDC> stack = null;
 
 foreach(var acdc in acdcs)
   stack = new Stack<ACDC>(acdc, stack);
-// stack = inaxys -> chokapoke -> tretagenaire
+// stack = lordPatate -> chokapoke -> tretagenaire
 //-> brique -> Garage -> Kirzkjdnsie -> null
 
 double four = stack.Pop().Pop().Peek();
