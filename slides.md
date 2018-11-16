@@ -97,6 +97,46 @@ bar = 25;
 > - What is the value of bar?
 > - 25
 
+## Functions
+
+```cs
+string bridge()
+{
+  return "you fools!";
+}
+```
+
+> - `string end = bridge();`{.cs}
+> - `// end = "you fools!"`{.cs}
+
+## Functions
+
+```cs
+void quoteMe(string end)
+{
+  Console.WriteLine("Fly, " + end);
+}
+```
+
+> - `// end = "you fools!"`{.cs}
+> - `end = quoteMe(end);`{.cs}
+> - What...?
+
+> - Impossible because the return type of quoteMe is void, so we can't retrieve anything from the function!
+
+## Functions
+
+```cs
+void quoteMe(string end)
+{
+  Console.WriteLine("Fly, " + end);
+}
+```
+
+> - `// end = "you fools!"`{.cs}
+> - `quoteMe(end);`{.cs}
+> - Fly, you fools!
+
 ## Comments
 
 > - What are comments?
@@ -221,77 +261,8 @@ bar[1] = 22;
 > - What is the value of foo?
 > - { 20, 22 }
 
-## Functions
 
-```cs
-string bridge()
-{
-  return "you fools!";
-}
-```
-
-> - `string end = bridge();`{.cs}
-> - `// end = "you fools!"`{.cs}
-
-## Functions
-
-```cs
-void quoteMe(string end)
-{
-  Console.WriteLine("Fly, " + end);
-}
-```
-
-> - `// end = "you fools!"`{.cs}
-> - `end = quoteMe(end);`{.cs}
-> - What...?
-
-> - Impossible because the return type of quoteMe is void, so we can't retrieve anything from the function!
-
-## Functions
-
-```cs
-void quoteMe(string end)
-{
-  Console.WriteLine("Fly, " + end);
-}
-```
-
-> - `// end = "you fools!"`{.cs}
-> - `quoteMe(end);`{.cs}
-> - Fly, you fools!
-
-## Arguments passed by reference
-
-```cs
-void setValue(int x)
-{
-  x = 0;
-}
-```
-
-> - `int val = 10;`{.cs}
-> - `setValue(val);`{.cs}
-
-> - What is the value of val?
-> - val = 10
-
-## Arguments passed by reference
-
-```cs
-void setValue(ref int x)
-{
-  x = 0;
-}
-```
-
-> - `int val = 10;`{.cs}
-> - `setValue(ref val);`{.cs}
-
-> - What is the value of val?
-> - val = 0
-
-## Visibility
+## Scope
 
 ```cs
 void awesome()
@@ -307,7 +278,7 @@ Console.WriteLine("Awesomeness: " + awesomeness);
 > - What will be written in the console?
 > - It won't even compile!
 
-## Visibility
+## Scope
 
 ```cs
 void awesome()
@@ -774,7 +745,6 @@ public class ACDC {
 
 ## In Code
 
-Generic Assistant class
 ```cs
 class Assistant
 {
@@ -786,47 +756,52 @@ class Assistant
     this.name = name;
     this.tshirtColor = tshirtColor;
   }
+
+  public virtual void Teach()
+  {
+    Console.WriteLine("Generic teacher");
+  }
 }
 ```
 
 ## In Code
 
-ACDC Class
 ```cs
 class ACDC : Assistant // Inherits from Assistant
 {
   private int camlSkills;
 
   public ACDC(string name, int skills):
-         base(name, Color.Brown) // Assistant constructor
+         base(name, Color.Red) // Assistant constructor
   {
     /* No need to initialize name and tshirtColor */
     this.camlSkills = skills;
   }
 
-  public void TeachCAML() {
-    /* CAML magic */
+  public override void Teach()
+  {
+    Console.WriteLine("Teach CAML");
   }
 }
 ```
 
 ## In Code
 
-ASM Class
 ```cs
 class ASM : Assistant /* Also inherits from Assistant */
 {
   private bool emacsLover;
 
   public ASM(string name, bool emacs):
-         base(name, Color.Grey) // Assistant constructor
+         base(name, Color.DarkBlue) // Assistant constructor
   {
     /* No need to initialize name and tshirtColor */
     this.emacsLover = emacs;
   }
 
-  public void TeachC99() {
-    /* Marwan's magic */
+  public override void Teach()
+  {
+    Console.WriteLine("Teach C99");
   }
 }
 ```
@@ -1012,6 +987,36 @@ switch (moyenne)
 > - `00000100`{.cs}
 
 > - `// power = 4`{.cs}
+
+## Arguments passed by reference
+
+```cs
+void setValue(int x)
+{
+  x = 0;
+}
+```
+
+> - `int val = 10;`{.cs}
+> - `setValue(val);`{.cs}
+
+> - What is the value of val?
+> - val = 10
+
+## Arguments passed by reference
+
+```cs
+void setValue(ref int x)
+{
+  x = 0;
+}
+```
+
+> - `int val = 10;`{.cs}
+> - `setValue(ref val);`{.cs}
+
+> - What is the value of val?
+> - val = 0
 
 ## Keywords
 
