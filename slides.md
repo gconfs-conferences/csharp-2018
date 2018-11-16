@@ -577,7 +577,7 @@ public static void Main(string[] args)
 {
   Student student = new Student();
 
-  if (! student.IsInClass())
+  if (!student.IsInClass())
     student.GoToClass();
   else
     student.Work();
@@ -829,6 +829,10 @@ class ASM : Assistant /* Also inherits from Assistant */
   }
 }
 ```
+
+## Questions
+
+Questions?
 
 # Advanced C\#
 
