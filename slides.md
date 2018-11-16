@@ -389,6 +389,14 @@ else
 Console.WriteLine("Bye!");
 ```
 
+## Control structures - if
+```ocaml
+match (promo, acdcu) with
+  (2021, true) -> print_string "Hi! I'm Ferdinand!\n"
+| (2021, false) -> print_string "Hello! I'm your ACDC!\n"
+| _ -> print_string "I'm still too young / old\n"
+```
+
 ## Control structures - while & do while
 
 ```cs
@@ -508,6 +516,13 @@ foreach (string name in names)
 
 > - It's finally clean!
 > - One rule: never modify the loop variable in a foreach!
+
+## Control structures - loops
+```ocaml
+let rec foreach l = match l with
+  [] -> ()
+| e::l -> print_string (e ^ " is in the place!\n"); foreach l
+```
 
 ## Questions?
 
