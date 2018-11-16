@@ -42,7 +42,7 @@ public class HelloWorld {
 
 ## Compilation 101
 
-> - The computer works only with 0 and 1 (Machine language)
+> - The computer works with its own language (Machine language)
 > - We need to translate our source code into machine language
 > - This is called **compilation**
 > - Compiler: program of translation
@@ -52,9 +52,7 @@ public class HelloWorld {
 
 ![Compilation Diagram](img/Compilation101.png)
 
-## C# Compilation
-
-![C# Compilation Diagram](img/CSCompilation.png)
+(Almost)
 
 ## .NET
 
@@ -67,25 +65,10 @@ public class HelloWorld {
 
 ## Types initialization
 
-> - Undeclared
-> - `int theAnswer;`{.cs}
-> - Declared but still uninitialized
-> - `theAnswer = 42;`{.cs}
-> - Initialized
-
-> - A little too long?
-
-## Types initialization
-
-> - Undeclared
 > - `int theAnswer = 42;`{.cs}
-> - Initialized
-
-## Arrays
-
-> - `int[] intTab;`{.cs}
-> - `int[] fibo = { 0, 1, 1, 2, 3, 5, 8, 13, 21 };`{.cs}
-> - `int[] zeroArray = new int[10];`{.cs}
+> - theAnswer is an integer, and equals 42
+> - `int theAnswer;`{.cs}
+> - theAnswer is an integer, and equals 0 (default value)
 
 
 ## Initialization - Examples
@@ -112,20 +95,6 @@ bar = 25;
 
 > - What is the value of bar?
 > - 25
-
-## Warning!
-
-```cs
-int[] foo = { 20, 20 };
-int[] bar = foo;
-bar[1] = 22;
-```
-
-> - What is the value of bar?
-> - { 20, 22 }
-
-> - What is the value of foo?
-> - { 20, 22 }
 
 ## Comments
 
@@ -176,8 +145,7 @@ two with a, b and c as coefficient */
 int delta = (b * b) - 4 * a * c;
 ```
 
-> - There is a problem...
-> - The comments are not compiled so the code will not compile
+> - Comments are not ignored, the code will not compile
 
 ## Operators
 
@@ -228,6 +196,28 @@ int delta = (b * b) - 4 * a * c;
 > - And if we want to negate a boolean?
 
 > - `!`{.cs}
+
+
+## Arrays
+
+> - `int[] intTab;`{.cs}
+> - `int[] fibo = { 0, 1, 1, 2, 3, 5, 8, 13, 21 };`{.cs}
+> - `int[] zeroArray = new int[10];`{.cs}
+
+
+## Warning!
+
+```cs
+int[] foo = { 20, 20 };
+int[] bar = foo;
+bar[1] = 22;
+```
+
+> - What is the value of bar?
+> - { 20, 22 }
+
+> - What is the value of foo?
+> - { 20, 22 }
 
 ## Functions
 
@@ -340,10 +330,10 @@ Console.WriteLine("Awesomeness: " + awesomeness);
 
 ## What is imperative?
 
-> - The computer is my slave
+> - The computer is my slave:
 > - Do my exam
-> - If I'm tired make me sleep
-> - While I sleep clean my dishes
+> - If I'm tired, make me sleep
+> - While I'm sleeping, clean my dishes
 
 ## Control structures - if
 
@@ -351,10 +341,12 @@ Console.WriteLine("Awesomeness: " + awesomeness);
 int promo = ...;
 bool acdcu = ...;
 
+Console.WriteLine("Hello!");
 if (promo == 2020 && acdcu)
 {
   Console.WriteLine("Hi! I'm Ferdinand!");
 }
+Console.WriteLine("Bye!");
 ```
 
 ## Control structures - if
@@ -363,6 +355,7 @@ if (promo == 2020 && acdcu)
 int promo = ...;
 bool acdcu = ...;
 
+Console.WriteLine("Hello!");
 if (promo == 2020 && acdcu)
 {
   Console.WriteLine("Hi! I'm Ferdinand!");
@@ -371,6 +364,7 @@ else if (promo == 2020 && !acdcu)
 {
   Console.WriteLine("Hello! I'm your ACDC!");
 }
+Console.WriteLine("Bye!");
 ```
 
 ## Control structures - if
@@ -379,6 +373,7 @@ else if (promo == 2020 && !acdcu)
 int promo = ...;
 bool acdcu = ...;
 
+Console.WriteLine("Hello!");
 if (promo == 2020 && acdcu)
 {
   Console.WriteLine("Hi! I'm Ferdinand!");
@@ -387,6 +382,7 @@ else if (promo == 2020)
 {
   Console.WriteLine("Hello! I'm your ACDC!");
 }
+Console.WriteLine("Bye!");
 ```
 
 ## Control structures - if
@@ -395,6 +391,7 @@ else if (promo == 2020)
 int promo = ...;
 bool acdcu = ...;
 
+Console.WriteLine("Hello!");
 if (promo == 2020 && acdcu)
 {
   Console.WriteLine("Hi! I'm Ferdinand!");
@@ -407,78 +404,7 @@ else
 {
   Console.WriteLine("I'm still too young / old :'(!");
 }
-```
-
-## Control structures - ternary
-
-```cs
-int n = ...;
-int abs = (n >= 0) ? n : -n;
-```
-
-> - ? is the if
-> - : is the else
-> - useful to shorten your code
-
-## Control structures - ternary
-
-```cs
-int n = -42;
-int abs = (n >= 0) ? n : -n;
-```
-
-> - What is the value of abs?
-> - 42
-
-## Control structures - ternary
-
-```cs
-int n = 2020;
-int abs = (n >= 0) ? n : -n;
-```
-
-> - What is the value of abs?
-> - 2020
-
-> - In all cases, abs is |n|
-
-## Control structures - switch
-
-```cs
-unsigned moyenne = ...;
-
-if (moyenne == 0)
-  Console.WriteLine("Substract one and it's perfect!");
-else if (moyenne == 10)
-  Console.WriteLine("Keep working!");
-else if (moyenne == 20)
-  Console.WriteLine("Perfect!");
-else
-  Console.WriteLine("Wut?");
-```
-
-> - Who does think it's ugly?
-> - It is...
-
-## Control structures - switch
-
-```cs
-unsigned moyenne = ...;
-switch (moyenne)
-{
-  case 0:
-    Console.WriteLine("Substract one and it's perfect!");
-    break;
-  case 10:
-    Console.WriteLine("Keep working!");
-    break;
-  case 20:
-    Console.WriteLine("Perfect!");
-    break;
-  default:
-    Console.WriteLine("Wut?");
-    break;
-}
+Console.WriteLine("Bye!");
 ```
 
 ## Control structures - while & do while
@@ -570,7 +496,7 @@ while (i < names.Count)
 }
 ```
 
-> - The integer i is in 4 different places, can we reduce?
+> - The integer i is in 4 different places, can it be improved?
 
 ## Control structures - for
 
@@ -583,7 +509,7 @@ for (int i = 0; i < names.Count; ++i)
 }
 ```
 
-> - It's quite better but ...
+> - It's better but ...
 > - We still have 3 i in the same line plus one in the loop
 > - Can we do better?
 
@@ -611,8 +537,8 @@ foreach (string name in names)
 
 > - A solution to a problem
 > - A concept
-> - Patterns
-> - Create 'objects' from the patterns
+> - Templates
+> - Create 'objects' from templates
 
 ## A class
 
@@ -904,6 +830,81 @@ class ASM : Assistant /* Also inherits from Assistant */
 ```
 
 # Advanced C\#
+
+## Control structures - ternary
+
+```cs
+int n = ...;
+int abs = (n >= 0) ? n : -n;
+```
+
+> - ? is the if
+> - : is the else
+> - useful to shorten your code
+
+## Control structures - ternary
+
+```cs
+int n = -42;
+int abs = (n >= 0) ? n : -n;
+```
+
+> - What is the value of abs?
+> - 42
+
+## Control structures - ternary
+
+```cs
+int n = 2020;
+int abs = (n >= 0) ? n : -n;
+```
+
+> - What is the value of abs?
+> - 2020
+
+> - In all cases, abs is |n|
+
+## Control structures - switch
+
+```cs
+unsigned moyenne = ...;
+
+if (moyenne == 0)
+  Console.WriteLine("Substract one and it's perfect!");
+else if (moyenne == 10)
+  Console.WriteLine("Keep working!");
+else if (moyenne == 20)
+  Console.WriteLine("Perfect!");
+else
+  Console.WriteLine("Wut?");
+```
+
+> - Who does think it's ugly?
+> - It is...
+
+## Control structures - switch
+
+```cs
+unsigned moyenne = ...;
+switch (moyenne)
+{
+  case 0:
+    Console.WriteLine("Substract one and it's perfect!");
+    break;
+  case 10:
+    Console.WriteLine("Keep working!");
+    break;
+  case 20:
+    Console.WriteLine("Perfect!");
+    break;
+  default:
+    Console.WriteLine("Wut?");
+    break;
+}
+```
+
+> - Still ugly ?
+> - It is, try to remove a `break` and watch the world burn
 
 ## Logic everywhere
 
