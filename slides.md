@@ -59,7 +59,8 @@ public class HelloWorld {
 > - Developed by Microsoft
 > - Software Framework
 > - Language interoperability
-> - Open sources
+> - Open source
+> - A set of APIs
 
 # Syntax
 
@@ -145,7 +146,7 @@ two with a, b and c as coefficient */
 int delta = (b * b) - 4 * a * c;
 ```
 
-> - Comments are not ignored, the code will not compile
+> - Comments are ignored, the code will not compile
 
 ## Operators
 
@@ -164,10 +165,11 @@ int delta = (b * b) - 4 * a * c;
 
 ## Operators
 
-> - `-(=)`{.cs}
-> - `*(=)`{.cs}
-> - `/(=)`{.cs}
-> - `%(=)`{.cs}
+> - `+`{.cs} and `+=`{.cs}
+> - `-`{.cs} and `-=`{.cs}
+> - `*`{.cs} and `*=`{.cs}
+> - `/`{.cs} and `/=`{.cs}
+> - `%`{.cs} and `%=`{.cs}
 
 > - `int theAnswer = 6;`{.cs}
 > - `theAnswer *= 2 + 10 % 7 + 1 * 2;`{.cs}
@@ -183,8 +185,8 @@ int delta = (b * b) - 4 * a * c;
 > - `bool isTheAnswer = (theAnswer == 42);`{.cs}
 > - `bool isNotTheAnswer = (theAnswer != 42);`{.cs}
 
-> - `<(=)`{.cs}
-> - `>(=)`{.cs}
+> - `<` and `<=`{.cs}
+> - `>` and `>=`{.cs}
 
 ## Logical operators
 

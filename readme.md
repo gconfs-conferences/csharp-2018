@@ -1,13 +1,13 @@
-# Conférence C# 2017
+# Conférence C# 2018
 
 ## Plan
 
-### Intro - CueBrick
+### Intro - Antoine
 
 * Historique
 * Compilation
 
-### Le langage - Tetra
+### Le langage -
 
 * .Net
 * Syntaxe
@@ -15,8 +15,8 @@
 
 ### POO
 
-* Les classes - Inaxys
-* Les objects - Inaxys
-* Visibilite - Tetra
-* Heritage, surchage - CueBrick
-* Advanced C# - Inaxys
+* Les classes -
+* Les objects -
+* Visibilite -
+* Heritage, surchage -
+* Advanced C# -
