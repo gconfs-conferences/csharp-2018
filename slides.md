@@ -1049,8 +1049,11 @@ void setValue(ref int x)
 ## Keywords
 
 * `var`
+* `null`
 * `typeof`
-* and a lot more (`yield`, `explicit`, `try`, `unsafe`, `using`)
+* `try catch`
+* `using`
+* and many more (`new`, `public`, `private`, `virtual`, `abstract`, `yield`, `unsafe`...)
 
 ## var
 
@@ -1060,16 +1063,19 @@ ACDC acdc = new ACDC();
 var acdc = new ACDC();
 ```
 
-## var and null
+## null
 
+>
 ```cs
-var nicolas = new ACDC();
-nicolas = null;
+ACDC nicolas = null;
+nicolas = new ACDC();
+```
 
-ACDC nicolas = new ACDC();
-nicolas = null;
-
-var nicolas = null; // compilation failed
+>
+```cs
+int a = null; // Compilation error
+var a = null; // Compilation error
+string a = null; // Ok!
 ```
 
 ## typeof
