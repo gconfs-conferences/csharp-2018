@@ -1195,7 +1195,7 @@ public statuc void Main()
 ## Generics
 
 * Define type-safe data structures
-* avoid code duplication
+* avoid code duplication, we don't want to create one data structure per type
 
 ## Example
 
@@ -1235,7 +1235,7 @@ public class Stack<T>
 ## Example
 
 ```cs
-Stack<int> stack;
+Stack<int> stack = null;
 
 for (int i = 0; i < 7; ++i)
   stack = new Stack<int>(i, stack);
@@ -1253,8 +1253,8 @@ Stack<ACDC> stack = null;
 
 foreach(var acdc in acdcs)
   stack = new Stack<ACDC>(acdc, stack);
-// stack = lordPatate -> chokapoke -> tretagenaire
-//-> brique -> Garage -> Kirzkjdnsie -> null
+// stack = LordPatate -> Nicolas -> Antoine
+//-> Moulette -> Intra -> Trish -> null
 
 double four = stack.Pop().Pop().Peek();
 
