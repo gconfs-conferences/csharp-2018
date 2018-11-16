@@ -15,8 +15,8 @@
 
 ### POO
 
-* Les classes -
-* Les objects -
-* Visibilite -
+* Les classes - Antoine
+* Les objects - Antoine
+* Visibilite - Antoine
 * Heritage, surchage -
 * Advanced C# -
