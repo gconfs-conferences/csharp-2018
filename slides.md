@@ -1086,6 +1086,7 @@ string a = null; // Ok!
 ## Example
 
 ```cs
+// ACDC inherits from Human
 Human people = new Human[42];
 [...]
 
