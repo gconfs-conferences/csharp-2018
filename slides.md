@@ -279,6 +279,15 @@ Console.WriteLine("Awesomeness: " + awesomeness);
 > - It won't even compile!
 
 ## Scope
+```ocaml
+let awesome () =
+  let awesomeness = 9001 in
+  print_string ("Awesomeness " ^ (string_of_int awesomeness));;
+
+print_string ("Awesomeness " ^ (string_of_int awesomeness));;
+```
+
+## Scope
 
 ```cs
 void awesome()
