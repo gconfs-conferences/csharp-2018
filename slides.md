@@ -1106,7 +1106,7 @@ class Human
 
   public static Human operator +(Human a, Human b)
   {
-    return new Human(mix(a.skin, b.skin), mix(a.eyes, b,eyes));
+    return new Human(mix(a.skin, b.skin), mix(a.eyes, b.eyes));
   }
 }
 ```
