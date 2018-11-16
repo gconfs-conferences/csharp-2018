@@ -639,8 +639,8 @@ class ACDC
 ```cs
 public static void Main(string[] args)
 {
-  ACDC lordPatate = new ACDC("LordPatate", 180, 2);
-  ACDC fuizziy = new ACDC("Fuizziy", 280, 20);
+  ACDC lordPatate = new ACDC("LordPatate", 190, 2);
+  ACDC fuizziy = new ACDC("Fuizziy", 290, 20);
 
   lordPatate.GetAge(); // returns 2
   fuizziy.GetAge(); // return 20
